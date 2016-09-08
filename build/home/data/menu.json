@@ -1,0 +1,45 @@
+$scope.menuProductos = {
+	cat : {
+		'Electronica' : {
+			'Televisiones': {
+				'MARCA1': 1,
+				'MARCA2': 2,
+				'MARCA3': 3,
+				'MARCA4': 4,
+				'MARCA5': 5
+			},
+			'Audio y Sonido': {
+				'MARCA6': 6,
+				'MARCA7': 7
+			},
+			'Home Theater': {
+				'MARCA8': 8,
+				'MARCA9': 9,
+				'MARCA5': 5,
+				'MARCA3': 3
+			},
+			'Videojuegos': {
+				'MARCA9': 9,
+				'MARCA5': 5
+			},
+			'Celulares': {
+				'MARCA1': 1,
+				'MARCA3': 3
+			}
+		},
+		'Muebles' : {
+			'Salas': {
+				'MARCA7': 7,
+				'MARCA8': 8
+			},
+			'Mesas': {
+				'MARCA1': 1
+			},
+			'Camas': {
+				'MARCA2': 2,
+				'MARCA3': 3,
+				'MARCA4': 4,
+			}
+		}
+	}
+};

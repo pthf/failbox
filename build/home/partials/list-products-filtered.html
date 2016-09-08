@@ -1,0 +1,33 @@
+<ul class="groupAllItems">
+  <li class="categoryList" ng-repeat="(key, data) in menuProductos" load-group-products-items>
+    <span ng-repeat="(key, data) in data">
+      <span class="category" style="cursor:pointer;" name="{{key}}">
+        <a href="productos/{{key | urlName }}" style="color:#FFF">
+          {{key}}
+        </a>
+        <img src="./src/images/viewmore-aside.png" style="width: 0.6em; height: auto; margin-left: 1vw;" ng-click="openCategory(key)">
+      </span>
+      <ul class="subcategoryList">
+        <span ng-repeat="(key2, data2) in data">
+          <li ng-repeat="(key3, subdata3) in data2" load-group-products-items>
+            <span class="subcategory" style="cursor:pointer;" name="{{key3}}">
+              <a href="productos/{{key | urlName }}/{{key3 | urlName }}" style="color:#FFF">
+                {{key3}}
+              </a>
+              <img src="./src/images/viewmore-aside.png" style="width: 0.7em; height: auto; margin-left: 1vw;"  ng-click="openSubCategory(key3)">
+            </span>
+            <ul class="brandList">
+              <span ng-repeat="(key4, data4) in subdata3">
+                <li ng-repeat="(key5, brand5) in data4" load-group-products-items>
+                  <span class="brand" style="cursor:pointer;">
+                    <a href="productos/{{key | urlName }}/{{key3 | urlName }}/{{key5 | urlName }}" style="color:#FFF">{{key5}}</a>
+                  </span>
+                </li>
+              </span>
+            </ul>
+          </li>
+        </span>
+      </ul>
+    </span>
+  </li>
+</ul>

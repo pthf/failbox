@@ -1,0 +1,147 @@
+<link rel="stylesheet" href="./css/slide.css">
+<div class="" style="width: 90%;margin-left:auto;margin-right: auto;">
+
+
+<div class="contInformation" style="width:100%;">
+
+	<div class="returnDiv col-md-12 text-right" style="margin-bottom: 3vw; width: 100%; margin-top: 3vw;">
+		<span class="returnSpan" style="font-size: 12px; background-color:#58595B; color: #FFF; font-weight: bold; padding: 10px 20px 10px 20px;">REGRESAR</span>
+	</div>
+
+	<div class="infoArticulo" style="width: 100%">
+
+		<div class="content-swiper col-md-4" >
+			<div class="show-porcent">{{porcent}}%</div>
+			<div class="swiper-container swiper-general-item">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide" ng-repeat="image in item.images_slider" >
+						<img src="./admin/images/products/{{image}}">
+					</div>
+				</div>
+			</div>
+			<div class="pagination"></div>
+		</div>
+
+
+		<!--Detalle del Producto-->
+		<div class="descInfo col-md-3">
+			<span class="descritem">{{item.name}}</span><br><br>
+			<s class="precio_lista">{{item.price | currency }}</s>
+			<span class="precio">{{item.not_price | currency}}</span><br>
+			<span style="color: #6EB153" ng-if="item.cost_shipping != 0">Costo de envío: {{item.cost_shipping | currency}}</span>
+			<span style="color: #6EB153" ng-if="item.cost_shipping == 0">¡Envio Gratis!</span><br><br>
+			<p>{{item.descripcion}}</p>
+			<p>Marca: {{item.marca}}</p>
+			<p>SKU: {{item.sku}}</p>
+		</div>
+		<!-- Contador -->
+		<div class="contador-detalle-producto col-md-3">
+			<table border="1" >
+				<tr>
+					<td>
+						<table>
+							<tr>
+								<td>
+
+									<button class="btn menos" type="button" id="menos"
+									ng-disabled = "quantity < 2"
+									ng-click="quantity = quantity - 1"
+									data-name="{{item.name}}"
+									data-id-product="{{item.id}}"
+									data-price="{{item.price}}"
+									data-notprice="{{item.not_price}}">
+									<img src="./src/images/carrito/min.png" />
+								</button>
+
+								<input readonly="{{readonly}}" class="input_stocks" id="cantidad" type="text" style="text-align: center; width:50px; padding: 5px 0px 5px 0px;" ng-model="quantity">
+
+								<button class="btn mas" type="button" id="mas"
+								ng-disabled="stock_session == 0"
+								ng-click="quantity = quantity + 1"
+								data-name="{{item.name}}"
+								data-id-product="{{item.id}}"
+								data-price="{{item.price}}"
+								data-notprice="{{item.not_price}}">
+								<img src="./src/images/carrito/mor.png" />
+							</button>
+
+						</td>
+					</tr>
+					<tr>
+						<td>Cant.</td>
+					</tr>
+					<tr>
+
+						<td ng-show="stock_session <= 3" ng-hide="stock_session >=3 || stock_session <=1" style="color:red;" > Solo quedan {{stock_session}} piezas disponibles*</td>
+						<td ng-show="stock_session == 1" style="color:red;">Último producto*</td>
+						<td ng-show="stock_session == 0" style="color:red;">Sin existencias*</td>
+
+					</tr>
+					<tr>
+						<td>
+							<div class="test_stock">
+								<div class="buttonAddCart" data-id="{{item.id}}" data-name="{{item.name}}" data-price="{{item.price}}" data-notprice="{{item.not_price}}" data-quantity="{{quantity}}" data-stocks="{{item.stocks}}"><img src="./src/images/carrito/agregar-carrito.png"></div>
+							</div>
+							<div class="test_stock_"></div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span class="result_products" style="color: red; font-size: 13px;"></span>
+						</td>
+					</tr>
+				</table>
+
+			</td>
+		</tr>
+	</table>
+	<!-- redes sociales -->
+	<!--div class="col-md-12 text-center redes">
+		<div class="leyenda">
+			Compartir Producto
+		</div>
+
+		<div class="img">
+			<a href="#">
+				<img src="./src/images/fbg.png" alt="" />
+			</a>
+			<a href="#">
+				<img src="./src/images/twg.png" alt="" />
+			</a>
+		</div>
+
+	</div-->
+
+</div>
+		<!-- Informacion de producto -->
+		<!-- <div class="informacion-producto col-md-12 col-xs-12 col-sm-12">
+			<div class="titulo">
+				<h2>Información Adicional <i class="glyphicon glyphicon-chevron-up"></i></h2>
+
+			</div>
+			<div class="contenedor col-md-8 col-xs-12 col-sm-12">
+
+				<div class="item col-md-12 col-xs-12 col-sm-12">
+					<div class="col-md-6 text-left">
+						NO. REF. (SKU)
+					</div>
+					<div class="col-md-6 text-right">
+						1000188883
+					</div>
+				</div>
+
+				<div class="item col-md-12">
+					<div class="col-md-6 text-left">
+						PROXIMAMENTE
+					</div>
+					<div class="col-md-6 text-right">
+						No
+					</div>
+				</div>
+
+			</div>
+		</div> -->
+	</div>
+
+</div>
+</div>

@@ -1,0 +1,33 @@
+<div class="sliderCat" id="slide2">
+
+	<div class="returnDiv" style="background: red; width: 80%; margin-bottom: 1vw; position: relative; ">
+		<span class="returnSpan" style="position: absolute; top: -2.5vw; right: 0; font-size: 12px; background-color:#58595B; color: #FFF; font-weight: bold; padding: 10px 20px 10px 20px;">REGRESAR</span>
+	</div>
+
+	<div class="contendItems">
+
+		<div class="contItemsPosition filtroall">
+			<div class="groupItems groupItemsFilters" ng-repeat="(key, data) in itemsCart" load-search-products-by-filters>
+				<div class="item itemFilters col-xs-4" ng-repeat="subdata in data.data">
+					<a href="articulo/{{subdata.url}}">
+						<div class="imgBox" style="position: relative;">
+							<img src="./admin/images/products/{{subdata.image}}">
+							<div class="divCapa" style="opacity:0; z-index: 1; background : rgba(88,89,91,.2); width: 100%; height: 100%; position: absolute; top: 0; left: 0; transition: 1s;"></div>
+							<img style="z-index: 2;" src="./src/images/mas_info.png" class="imgInfo">
+						</div>
+					</a>
+					<span class="descritem">{{subdata.name}}</span>
+					<span class="price_not">{{subdata.price | currency }}</span>
+					<span class="price_yes">{{subdata.not_price | currency }}</span>
+					<!-- <a href="{{subdata.paypal}}" target="_blank"><div class="buttonAddCart"><img src="./src/images/cartimage.png"></div></a> -->
+					<div class="buttonAddCart" data-id="{{subdata.id}}" data-name="{{subdata.name}}" data-price="{{subdata.price}}" data-notprice="{{subdata.not_price}}" data-quantity="1" data-stocks="{{subdata.stocks}}"><img src="./src/images/cartimage.png"></div>
+				</div>
+			</div>
+		</div>
+
+    <div class="itemSelecteds">
+
+    </div>
+
+  </div>
+</div>

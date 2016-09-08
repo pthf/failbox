@@ -1,0 +1,105 @@
+<div class="resumen-compra carrito" ng-controller="getListItemsCart">
+
+    <div class="container" id="idpedido_resumen" pedido="{{idPedido}}">
+        <div ng-if="itemsCart == ''" >
+            <div class="titulo carrito-vacio">
+                <h1>NO TIENES PRODUCTOS EN TU CARRITO.</h1>
+                <h2><a href="productos">
+                    <button class="btn btn-success btn-lg">¡Empieza a comprar ahora!</button>
+                </a></h2>
+            </div>
+        </div>
+        <div ng-if="itemsCart">
+            <div class="titulo">
+                <img id="logcarrito" src="./src/images/carrito/c1.png" alt="" />
+                RESUMEN DE COMPRA
+            </div>
+            <div class="productos">
+                <div class="producto container-fluid vertical-align" ng-repeat="(key, itemsCart) in itemsCart">
+                    <div class="col-md-4 imagen text-center">
+                        <img class="img-responsive" src="./admin/images/products/{{itemsCart.foto_producto}}" />
+                    </div>
+                    <div class="col-md-4 texto">
+                        {{itemsCart.nombre_producto}}
+                        <br><br>
+                        Cantidad: {{itemsCart.cantidad}}
+                    </div>
+                    <div class="col-md-4 precio text-center">
+                        <div  class="price_yes text-center">{{itemsCart.precio | currency}}</div>
+                    </div>
+                </div>
+                <div class="container-fluid vertical-align datos-envio">
+                    <div class="descripcion">
+                        <div class="col-md-10 col-md-offset-2">
+
+                            <div class="col-md-12 title">
+                                DATOS DE ENVíO
+                            </div>
+                            <div class="col-md-12 direccion">
+
+                                {{datesPedido.Direccion}} {{datesPedido.Colonia}}
+                            </div>
+                            <div class="col-md-12 ciudad">
+                                {{datesPedido.Ciudad}}, {{datesPedido.Estado}}
+                            </div>
+                            <div class="col-md-12 codigo">
+                                C.P. {{datesPedido.CP}}
+                            </div>
+                            <div class="col-md-12 telefono">
+                                {{Celular}}
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-md-4 precio text-center" ng-if="totalCart.total == totalCart.total_descuento">
+                        <div  class="text-center">{{totalCart.total | currency}}</div>
+                    </div>
+                    <div class="col-md-4 precio text-center" ng-if="totalCart.total != totalCart.total_descuento">
+                        <div  class="text-center">{{totalCart.total_descuento | currency}}</div>
+                    </div>
+                </div>
+
+
+
+            </div>
+            <div class="opciones col-md-12 col-sm-12 col-xs-12">
+                <br>
+                <div class="text text-left volver col-md-6 col-sm-6 col-xs-6">
+                    <a href="datos-envio">
+                        <img src="./src/images/carrito/back-arrow.png" />
+                        <span>VOLVER</span>
+                    </a>
+                </div>
+
+                <div class="text-right pay col-md-6 buttonPaypal" ng-controller="purchaseSummary">
+                    <div class="buttonPaypal">
+                        <input class="formPaypal" type="image" src="./src/images/carrito/button_paypal02.png" name="button" style="width: 53% !important;">
+                    </div>
+                    <form id="target" style="display:none" action="https://www.paypal.com/mx/cgi-bin/webscr" method="post">
+                    <!--<form id="target" style="display:none" action="https://www.sandbox.paypal.com/mx/cgi-bin/webscr" method="post">-->
+                        <input type="hidden" name="cmd" value="_xclick">
+                        <input type="hidden" name="business" value="hola@failbox.mx">
+                        <!-- <input type="hidden" name="business" value="hola-facilitator@failbox.mx"> -->
+                        <input type="hidden" name="item_name" value="Compras Failbox">
+                        <input type="hidden" name="currency_code" value="MXN">
+                        <input ng-if="totalCart.total == totalCart.total_descuento" type="hidden" name="amount" value="{{totalCart.total | currency}}">
+                        <input ng-if="totalCart.total != totalCart.total_descuento" type="hidden" name="amount" value="{{totalCart.total_descuento | currency}}">
+                        <input type="hidden" name="return" value="http://failbox.mx/home/gracias/{{idPedido}}">
+                        <!-- <input type="hidden" name="return" value="http://localhost/www/failbox/build/home/gracias/{{idPedido}}"> -->
+                        <input type="hidden" name="cancel_return" value="http://failbox.mx/home/php/cancelado.php?num={{idPedido}}">
+                        <!-- <input type="hidden" name="cancel_return" value="http://localhost/www/failbox/build/home/php/cancelado.php?num={{idPedido}}"> -->
+                        <input type="hidden" name="notify_url" value="http://failbox.mx/home/php/pay_valite.php?num={{idPedido}}">
+                        <!-- <input type="hidden" name="notify_url" value="http://localhost/www/failbox/build/home/php/pay_valite.php?num={{idPedido}}"> -->
+
+                        <input type="image" src="./src/images/carrito/paypal.jpg" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
+                    </form>
+                </div>
+                <div class="">
+                    <img style="padding-left: 76%;width: 106%;" type="image" src="./src/images/carrito/button_paypal01.png"></img>
+                </div>
+                <br>
+            </div>
+        </div>
+    </div>
+</div>

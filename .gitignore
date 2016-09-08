@@ -1,0 +1,16 @@
+node_modules
+/build/.htaccess
+
+build/.htaccess
+node_modules/
+node_modules/.bin/browserslist
+node_modules/.bin/browserslist
+node_modules/.bin/mime
+node_modules/.bin/esparse
+node_modules/.bin/acorn
+*.htaccess
+node_modules/.bin/user-home
+node_modules/.bin/semver
+scss/
+.sass-cache/
+/nbproject/private/

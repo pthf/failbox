@@ -1,0 +1,78 @@
+<slider-home ng-if="loadingData"></slider-home>
+
+<elements-float></elements-float>
+
+<div class="titleDiv">
+	<span class='titleHome'>
+		FLASH SALE
+	</span>
+</div>
+
+<slider-cart-feactured ng-controller="sliderFeacturedProductsController" ng-if="loadingData"></slider-cart-feactured>
+
+<div class="row gridComoComprar">
+  <div class="col-md-4">
+    <div class="containerDescription">
+      <span class="title textDeco">Paga online de forma segura</span>
+      <div>
+        <span class="image"><img src="./src/images/Pasos_Sitio_Failbox-02.png"></span>
+        <span class="text">
+          Usa paypal, la forma confiable de comprar en línea sin usuar tu información financiera.<br>
+          <img width="50%" height="auto" src="./src/images/Pasos_Sitio_Failbox-05.png">
+        </span>
+      </div>
+      <span class="url textDeco selectOpenPopUp" ng-click="selectpopup(3)">¿Qué es PayPal?</span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="containerDescription">
+      <span class="title textDeco">Recibe el producto</span>
+      <div>
+        <span class="image"><img src="./src/images/Pasos_Sitio_Failbox-03.png"></span>
+        <span class="text">
+          Monitorea tu producto en el tiempo de entrega estimado. Envio sin costo en la mayoría de modalidades y a todo México.
+        </span>
+      </div>
+      <span class="url textDeco selectOpenPopUp" ng-click="selectpopup(4)">¿Cuáles son los costos de envío?</span>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="containerDescription">
+      <span class="title textDeco">Garantía del Fabricante</span>
+      <div>
+        <span class="image"><img src="./src/images/Pasos_Sitio_Failbox-04.png"></span>
+        <span class="text">
+          Recibe la garantía de tu producto directamente del fabrícante y aprovecha los descuentos de un producto nuevo con empaque dañado.
+        </span>
+      </div>
+      <span class="url textDeco selectOpenPopUp" ng-click="selectpopup(1)">¿Cuál es la garantía de mi producto?</span>
+    </div>
+  </div>
+</div>
+
+<div class="titleDiv">
+	<span class='titleHome'>
+		LO MÁS VENDIDO
+	</span>
+</div>
+
+<slider-cart-new ng-controller="sliderNewProductsController" ng-if="loadingData"></slider-cart-new>
+
+<div class="titleDiv">
+	<span class='titleHome'>
+		CATEGORÍAS
+	</span>
+</div>
+
+<div class="categoriesFailbox">
+	<ul>
+		<li><a href="productos/apple"><img src="./src/images/botones y banner-08.png"></a></li>
+		<li><a href="productos/audio/bocinas"><img src="./src/images/botones y banner-11.png"></a></li>
+		<li><a href="productos/audio/audifonos"><img src="./src/images/botones y banner-12.png"></a></li>
+		<li><a href="productos/accesorios/camara-sport"><img src="./src/images/botones y banner-13.png"></a></li>
+		<li><a href="productos/bags-%7C-cases"><img src="./src/images/botones y banner-14.png"></a></li>
+		<li><a href="productos/apple/iphone"><img src="./src/images/botones y banner-15.png"></a></li>
+		<li><a href="productos/zona-gamer"><img src="./src/images/botones y banner-09.png"></a></li>
+		<li><a href="productos/accesorios/power-banks"><img src="./src/images/botones y banner-10.png"></a></li>
+	</ul>
+</div>

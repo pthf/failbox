@@ -1,0 +1,463 @@
+
+<style>
+	@media (max-width: 767px){
+		.titleNav{
+			display:none;
+		}
+		.ulmenuMobile{
+
+		}
+		.topMenu{
+			padding:0;
+		}
+		.navbar{
+			position: absolute;;
+			background-color: rgba(248, 248, 248, 0);
+			border: none;
+			left:0;
+			width: 100%;
+			height: 100%;
+		}
+		.navbar-header{
+			height: auto;
+		}
+
+		.navbar-toggle{
+			position: absolute;
+			margin: 0;
+
+			height: 100%;
+			border-radius: 0;
+		}
+		.navbar-default .navbar-toggle{
+			border: 1px solid rgba(255, 255, 255, 0);
+			top: 4px;
+			left:3px;
+		}
+		.navbar-fixed-top {
+			position: relative;
+			top: auto;/* Auto position navbar top */
+		}
+
+		.navbar-fixed-bottom .navbar-collapse, .navbar-fixed-top .navbar-collapse {
+			max-height:inherit;/* Clear max-height */
+		}
+
+		.navbar-toggle .top-bar {
+			transform: rotate(45deg);
+			-webkit-transform: rotate(45deg);
+			transform-origin: 10% 10%;
+			-webkit-transform-origin: 10% 10%;
+		}
+		.navbar-toggle .middle-bar {
+			opacity: 0;
+		}
+		.navbar-toggle .bottom-bar {
+			transform: rotate(-45deg);
+			transform-origin: 10% 90%;
+			-webkit-transform: rotate(-45deg);
+			-webkit-transform-origin: 10% 90%;
+		}
+		.navegationFailBox input.barNav {
+			width: 75%;
+			margin-left: 15%;
+		}
+		.navbar-toggle .icon-bar {
+			transition: all 0.2s;
+			-webkit-transition: all 0.2s;
+		}
+		.navbar-toggle.collapsed .top-bar {
+			transform: rotate(0);
+			-webkit-transform: rotate(0);
+		}
+		.navbar-toggle.collapsed .middle-bar {
+			opacity: 1;
+		}
+		.navbar-toggle.collapsed .bottom-bar {
+			transform: rotate(0);
+			-webkit-transform: rotate(0);
+		}
+
+		.navbar-default .navbar-toggle .icon-bar{
+			background-color: #fff;
+			width: 30px;
+			height: 3px;
+		}
+		.navbar-toggle .icon-bar+.icon-bar{
+			margin-top: 5px;
+		}
+
+		.navbar-default .navbar-toggle:focus, .navbar-default .navbar-toggle:hover{
+			background-color: rgba(248, 248, 248, 0);
+		}
+		.navbar-collapse{
+			position: absolute;
+			z-index: 999;
+		}
+
+		.navbar-collapse .title{
+			color: #fff;
+
+		}
+		.navbar-collapse .sub{
+			background-color: #3e3e3e;
+			padding: 0;
+			border-bottom: 1px solid #6b6b6b;
+		}
+		.navbar-collapse .sub:last-child{
+			border-bottom: none;
+		}
+		.navbar-collapse .main-submenu-mobile{
+			padding-top: 2px;
+		}
+		.navbar-collapse .sub a{
+			display: block;
+			padding: 12px 35px;
+		}
+		.navbar-collapse, .navbar-default .navbar-form{
+			border-color: rgb(231, 231, 231);
+			background-color: #58595B;
+			width: 50%;
+			font-size: 12px;
+		}
+		.navbar-collapse ul li{
+			border-bottom: 1px solid #dcdcdc;
+			padding: 15px 0;
+		}
+		.navbar-collapse ul li:last-child{
+			border-bottom: 0px solid #fff;
+		}
+		.navbar-collapse ul li:first-child{
+			border-top: 0px solid #fff;
+		}
+		.topMenu .navegationFailBox label{
+			width: 100%;
+			left: 44px;
+			z-index: 9999;
+		}
+		.nav>li>a:focus, .nav>li>a:hover{
+			background-color: rgba(238, 238, 238, 0);
+		}
+		.navbar-nav a{
+			width: 100%;
+			height: 100%;
+		}
+		.navbar-nav{
+			margin-top: 0;
+			margin-bottom: 0;
+		}
+		.main-submenu-mobile .sub{
+			display: none;
+		}
+		.h-title{
+			padding-left: 10px;
+		}
+		.no-padding{
+			padding: 0 !important;
+		}
+		.no-padding a{
+			display: block;
+			padding: 10px 0;
+		}
+		.additional div:first-child{
+			border-right: 1px solid #fff;
+		}
+		.red-social > .btn{
+		}
+		@media (max-width: 480px){
+			.navbar-collapse, .navbar-default .navbar-form{
+				width: 100%;
+			}
+			.navegationFailBox input.barNav{
+				margin-left: 0;
+			}
+			.topMenu .navegationFailBox label{
+				left: 25px;
+			}
+		}
+	}
+</style>
+
+<div ng-controller="topMenuController" class="menuTopPosition" id="menutopmain" style="height: 100%">
+	<div class="topMenu" id="top">
+
+		<nav class="navbar navbar-default navbar-static-top" role="navigation" style="margin-bottom:0px;">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar top-bar"></span>
+					<span class="icon-bar middle-bar"></span>
+					<span class="icon-bar bottom-bar"></span>
+				</button>
+			</div>
+		</nav>
+
+		<div class="logoFailBox">
+			<div class="img">
+				<a href="./home"><img src="src/images/failbox-04.png"></a>
+			</div>
+			<div class="titleNav">
+				<span>¿Quiénes somos?</span>
+			</div>
+		</div>
+
+		<div class="navegationFailBox" ng-controller="tabShowMenuTopController as tabs">
+
+			<label style="position: relative">
+
+				<div class="nav" ng-mouseleave="tabs.closeMenuRestart()">
+					<span class="opctit" ng-mouseover="tabs.selectTab(0); tabs.openMenu()"  ng-mouseleave="tabs.selectTab(0)" style="width: 100%; display: inline-block;">
+						Productos
+						<img class="selectIndicator" src="src/images/indMostLess-02.png">
+					</span>
+
+					<ul class="listNav" ng-show="tabs.menuProductos">
+						<li class="itemGroup" ng-repeat="(key, data) in menuProductos"  ng-init="imgSrc='src/images/indMostLess-01.png'" ng-mouseover="imgSrc='src/images/indMostLess-01.png'" ng-mouseout="imgSrc='src/images/indMostLess-01.png'">
+							<span class="title" ng-mouseover="tabs.selectTab($index+1)" ng-mouseleave="tabs.selectBrand(0)">
+								<span ng-repeat="(subkey, subdata) in data">
+									<a href="productos/{{subkey | urlName}}">
+										{{subkey}}
+										<img style="width: .65em" class="selectIndicator" ng-src="{{imgSrc}}">
+									</a>
+								</span>
+							</span>
+
+							<span ng-show="$last"  class="title" >
+								<span ng-repeat="(subkey, subdata) in data">
+									<a href="productos">
+										Todos los productos
+									</a>
+								</span>
+							</span>
+
+							<ul class="subItems" ng-show="tabs.tab_selected === {{$index+1}}" style="margin-top: -1vw;">
+								<span ng-repeat="(subkey, subdata) in data">
+									<li ng-repeat="(key, subDataKey) in subdata" ng-mouseover="tabs.selectBrand($index+1)">
+										<span ng-repeat="(keysubDataKey, datasubDataKey) in subDataKey" style="width: 100%; display: inline-block;" >
+											<a href="productos/{{subkey | urlName}}/{{keysubDataKey | urlName}}" style="width: 100%; display: inline-block;">
+												{{keysubDataKey}}
+											</a>
+
+
+
+
+										</span>
+									</li>
+								</span>
+							</ul>
+						</li>
+					</ul>
+				</div>
+
+				<input class="barNav" type="text">
+			</input>
+
+			<div class="search">
+				<img src="src/images/failbox-05.png">
+			</div>
+
+			<div class="contElements">
+				<div style="width: auto; height: auto; background:#FFF;">
+				</div>
+			</div>
+
+		</label>
+
+	</div>
+
+	<!-- <div class="countBar" ng-controller="tabShowMenuTopController as tabs"> -->
+
+	<!-- <div class="countBar" ng-controller="tabShowMenuTopController as tabs">
+		<div class="nav">
+			<span class="opctit" ng-click="tabs.openCuenta()">Mi Cuenta <img class="selectIndicator" src="src/images/indMostLess-02.png"></span>
+
+			<ul class="listNav" ng-show="tabs.menuCuenta" ng-if="loginUser==0">
+				<li class="itemGroup">
+					<span class="title" ng-click="tabs.openCuenta(1)">Registrarse</span>
+				</li>
+				<li class="itemGroup">
+					<span class="title" ng-click="tabs.openCuenta(0)">Iniciar Sesión</span>
+				</li>
+			</ul>
+
+			<ul class="listNav" ng-show="tabs.menuCuenta" ng-if="loginUser!=0">
+				<li class="itemGroup">
+					<span class="title" ng-click="tabs.openCuenta();">Panel</span>
+				</li>
+				<li class="itemGroup">
+					<span class="title logOut" ng-click="tabs.openCuenta();">Cerrar Sesión</span>
+				</li>
+			</ul>
+
+		</div>
+	</div> -->
+	<!-- Modal -->
+	<div ng-controller="tabShowMenuTopController as tabs" class="modal modal-login fade in" id="popup-registrar" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog " role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close" style="opacity: 1">
+						<img width="30px;" src="src/images/close2.jpg "/>
+					</button>
+					<h4 class="modal-title" id="myModalLabel"></h4>
+				</div>
+				<div class="modal-body col-md-12">
+
+					<div class="col-md-12 col-sm-12 col-xs-12 inicio text-center" style="display:none">
+
+						<div class="text-center head-title col-md-12">
+							<h2>INICIAR SESIÓN</h2>
+						</div>
+						<div class="red-social col-md-12" style="padding: 0 40px;">
+							<button class="btn btn-lg inicio-session-face setDataFB" style="padding: 13px 0">FACEBOOK</button>
+						</div>
+						<div class="col-xs-12 col-md-12 cont-social"><div class="divider"><strong class="divider-title ng-binding">o</strong></div></div>
+						<div class="col-md-12  col-sm-12 col-xs-12">
+
+							<form class="form col-md-12 col-sm-12 col-xs-12" method="post">
+								<div class="form-group col-md-12 col-sm-12 col-xs-12">
+									<input class="form-control" type="text" placeholder="Correo Electrónico" value="">
+								</div>
+								<div class="form-group col-md-12 col-sm-12 col-xs-12">
+									<input class="form-control" type="text" placeholder="Contraseña" value="">
+								</div>
+								<div class="checkbox form-group col-md-6 col-sm-6 col-xs-6 text-left">
+									<label style="color: #757575; font-size: 14px">
+										<input type="checkbox"> Recordarme
+									</label>
+								</div>
+								<div class="form-group col-md-6 text-right col-sm-6 col-xs-6">
+									<button type="submit" class="btn btn-success btn-lg">Ingresar</button>
+								</div>
+							</form>
+
+						</div>
+						<br><br>
+						<div class="col-md-12 col-sm-12 col-xs-12">
+
+
+							<div class="olvidaste opcion">
+								<a href="#">
+									¿Olvidaste tu nombre de usuario o contraseña?
+								</a>
+							</div>
+							<div class="no-tienes opcion">
+								¿No tienes cuenta? <span class="registrate">Regístrate</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="col-md-12 col-sm-12 col-xs-12 registro" style="display:none;border:none;">
+						<div class="text-center head-title">
+							<h2>REGISTRARSE</h2>
+						</div>
+						<div class="red-social col-md-12" style="padding: 0 40px;">
+							<button class="btn btn-lg inicio-session-face setDataFB " style="padding: 13px 0">REGÍSTRATE CON FACEBOOK</button>
+						</div>
+						<div class="col-xs-12 cont-social"><div class="divider"><strong class="divider-title ng-binding">o</strong></div></div>
+
+						<div class="col-xs-12" style="text-align: center; margin-top: -.25em; margin-bottom: 2em;"><span><strong style="color:#757575;">Regístrate con tu dirección de email</strong></span></div>
+						<div class="col-md-12  col-sm-12 col-xs-12">
+							<form id="formNewUser" class="form col-md-12 col-sm-12 col-xs-12 vertical-align" method="post">
+								<div class="form-group col-md-12 col-sm-12 col-xs-12">
+									<input data-status="denied" class="form-control col-md-12 col-sm-12 col-xs-12" type="text" placeholder="Nombre" value="" name="firstname">
+									<span class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+								</div>
+								<div class="form-group col-md-12 col-sm-12 col-xs-12">
+									<input data-status="denied" class="form-control" type="text" placeholder="Apellido" value="" name="lastname">
+									<span class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+								</div>
+								<div class="form-group col-md-12 col-sm-12 col-xs-12">
+									<input data-status="denied" class="form-control" type="text" placeholder="Correo Electrónico" value="" name="email">
+									<span class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+								</div>
+								<div class="form-group col-md-12 col-sm-12 col-xs-12">
+									<input data-status="denied" class="form-control" type="password" placeholder="Contraseña" value="" name="password">
+									<span class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+								</div>
+								<div class="form-group col-md-12 col-sm-12 col-xs-12">
+									<input data-status="denied" class="form-control" type="password" placeholder="Confirmar contraseña" value="" name="confirmpassword">
+									<span class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+								</div>
+								<div class="checkbox form-group col-md-12 col-sm-12 col-xs-12" style="display:block">
+									<label style="color: #757575; font-size: 14px">
+										<input type="checkbox" name="newsletter" checked> Deseo suscribirme al Newsletter
+									</label>
+								</div>
+								<div class="form-group col-md-12 col-xs-12 col-sm-12" style="display:block; color: #757575">
+									Al hacer click en Registrarse, aceptas los <a>términos y condiciones</a> y la <a>política de privacidad</a> de Failbox.
+								</div>
+								<div class="form-group col-md-12 text-right col-sm-12 col-xs-12 submit">
+									<button type="submit" class="btn btn-success btn-lg">REGÍSTRATE</button>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<div class="modal-footer">
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+	<div class="cartBar" ng-controller="countItemsCart">
+		<div class="nav">
+			<div ng-if="countCart == ''" class="icon-countCart">
+				<img src="src/images/failbox-03.png">
+			</div>
+			<div ng-if="countCart" class="icon-countCart">
+				<span class="cantidad">{{countCart}}</span>
+				<img src="src/images/failbox-03.png">
+			</div>
+		</div>
+	</div>
+
+</div>
+<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" ng-controller="tabShowMenuTopControllerMobile as tabs">
+
+	<ul class="nav navbar-nav ulmenuMobile" ng-repeat="(key, data) in menuProductos">
+
+		<li class="title menuMobile" ng-repeat="(key, datas) in data">
+			<span class="h-title">{{key}}</span>
+			<ul class="main-submenu-mobile">
+				<li ng-show="$first" class="sub">
+					<span class="title">
+						<a href="productos/{{key | urlName}}">
+							Todos
+						</a>
+					</span>
+				</li>
+				<li ng-repeat="(subkey, subdatas) in datas" class="sub">
+					<a ng-repeat="(keysubDataKey, datasubDataKey) in subdatas" href="productos/{{key | urlName}}/{{keysubDataKey | urlName}}">
+						{{keysubDataKey}}
+					</a>
+				</li>
+			</ul>
+		</li>
+		<li ng-show="$last" class="close-menu">
+			<span class="title" style="margin-left:10px">
+				<a href="productos">
+					Todos los productos
+				</a>
+			</span>
+		</li>
+		<li ng-show="$last" class="row additional no-padding close-menu">
+			<div class="col-xs-6 text-center no-padding">
+				<a href="faq">
+					<i class="glyphicon glyphicon-book"></i>
+					FAQ
+				</a>
+			</div>
+			<div class="col-xs-6 text-center no-padding close-menu">
+				<a href="contacto">
+					<i class="glyphicon glyphicon-edit"></i>
+					Contacto
+				</a>
+			</div>
+		</li>
+
+	</ul>
+</div>
+</div>

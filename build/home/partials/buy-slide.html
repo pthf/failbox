@@ -1,0 +1,39 @@
+<div class="buy-slide" ng-controller="getListItemsCart">
+    <div ng-if="!itemsCart" class="comineza">
+        <div class="col-md-12 text-center texto">
+            <h4>No tienes productos</h4>
+        </div>
+        <div class="col-md-12 cnt">
+            <a href="productos">
+            <button class="btn btn-success btn-lg" name="button">Comienza a comprar ahora</button>
+            </a>
+        </div>
+
+    </div>
+    <div class="" ng-if="itemsCart">
+        <div class="content-buy" >
+
+            <!-- NGREPEAT -->
+            <div class="producto productsFlex" ng-repeat="list in itemsCart">
+
+                <div style="width: 50%;">
+                    <img style="width: 80%; height: auto; margin: 0 auto;" src="./admin/images/products/{{list.foto_producto}}" />
+                </div>
+                <div style="width: 50%;">
+                    <div class="titulo">{{list.nombre_producto}}</div>
+                    <div class="descripcion">{{list.descripcion_producto | limitTo: 30}}...</div>
+                    <div class="cantidad">Cantidad: {{list.cantidad}}</div>
+                    <div class="precio">Subtotal: {{(list.precio * list.cantidad) | currency}}</div>
+                </div>
+
+            </div>
+
+        <div class="subtotal col-md-12 col-lg-12 col-sm-12" ng-controller="purchaseSummary">
+            <div class="col-md-6 col-lg-6 text-left col-sm-6"><strong>TOTAL: </strong></div>
+            <div class="precio col-md-6 col-lg-6 col-sm-6 text-right">{{totalCart.total | currency}}</div>
+        </div>
+        <div class="col-md-12 col-lg-12 col-sm-12 text-center content-btn">
+            <a href="carrito"> <button class="btn btn-success btn-lg ">IR A CARRITO</button></a>
+        </div>
+    </div>
+</div>

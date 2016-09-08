@@ -1,0 +1,133 @@
+<script type="text/javascript">
+$(document).ready(function(){
+	checksize();
+	//topheight();
+})
+$(window).resize(function(){
+	checksize();
+});
+function checksize(){
+	if($(document).width() < 751){
+		$('.socialFailBox').addClass('container');
+	} else if($(document).width() > 752) {
+		$('.socialFailBox').removeClass('container');
+	}
+
+}
+/*function topheight(){
+	var timeoutId = null;
+	if (timeoutId) clearTimeout(timeout);
+	var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+	if (!isMobile) {
+
+		setTimeout(function(){
+			var height =  document.getElementById('menutopmain').offsetHeight;
+			var height2 = $('.gridSerives').height() + height+30;
+			console.log($('.gridSerives').height(), height, 30 );
+			$('.loadedView').css('margin-top', height+'px');
+			$('.gridCategories').css('top', height+20+'px');
+			$('.gridSerives2').css('top', height2+'px');
+			$('.gridSerives').css('top', height+'px');
+		}, 500);
+	} else {
+		$('.buy-slide').css('margin-top', height+'px');
+	}
+}*/
+</script>
+
+<div class="bottomSite">
+	<div class="navFailBox">
+		<a class="visible-sm" href="#/"><img style="width: 3vw" class="img-responsive" src="./src/images/failbox-04.png"></a><br>
+		<a class="visible-xs visible-md hidden-sm visible-lg" href="#/"><img class="logo img-responsive" src="./src/images/failbox-04.png"></a><br>
+		<div class="footer-options">
+			<!-- <nav class="footer-left-side">
+				<li class="footer-option"><b>Failbox</b></li><br>
+				<li class="footer-option"><a href="">Quiénes somos</a></li>
+				<li class="footer-option"><a href="">Historia</a></li>
+				<li class="footer-option"><a href="">Misión</a></li>
+				<li class="footer-option"><a href="">Visión</a></li>
+				<li class="footer-option"><a href="">Valores</a></li>
+				<li class="footer-option"><a href="">Personajes</a></li>
+				<li class="footer-option"><a href="">Reconocimientos</a></li>
+			</nav> -->
+			<nav class="footer-right-side">
+				<li class="footer-option"><b>Servicio al Cliente</b></li><br>
+				<!-- <li class="footer-option"><a href="">¿Cómo comprar? </a></li> -->
+				<li class="footer-option selectOpenPopUp" ng-click="selectpopup(3)"><a href="">Formas de Pago</a></li>
+				<li class="footer-option"><a href="./faq">Faq's </a></li>
+				<li class="footer-option"><a href="./aviso-de-privacidad">Aviso de privacidad</a></li>
+				<li class="footer-option selectOpenPopUp" ng-click="selectpopup(1)"><a href="">Garantía</a></li>
+				<li class="footer-option"><a href="./aviso-de-privacidad">Condiciones de uso</a></li>
+				<li class="footer-option"><a href="./contacto">Contacto</a></li>
+			</nav>
+		</div>
+	</div>
+	<div class="socialFailBox">
+		<div class="followSocial" style="display: inline-flex">
+			<span class="titleFollow" style="display: inline-block; margin-right: .9vw;">¡Síguenos!</span>
+			<a href="https://www.facebook.com/FAILBOXmx/?fref=ts" target="_blank">
+				<li>
+					<img style="width: 25px; height: auto;" src="./src/images/fb.png">
+				</li>
+			</a>
+		</div>
+		<div class="newsletter" style="margin-top: 1vw;">
+			<span style="width: 100%; text-align: right; display: inline-block;">Suscríbete a nuestro Newsletter</span>
+			<form id="newsletterForm" class="">
+				<div class="input-group" style="width: 100%; text-align: right;">
+					<input class="texti" type="email" required placeholder="Tu email"></input>
+					<input class="submitt" type="submit" value="Enviar"></input>
+				</div>
+				<div class="terminos" style="width: 100%; text-align: right;">
+					<input class="checkb2" type="checkbox" required></input><span class="checkb">Acepto los <a href="aviso-de-privacidad" style="text-decoration:underline !important; color: #FFF;">términos de Privacidad.</a> </span>
+					<span class="correctSusc" style="display: block; width: 100%; margin-top: .5vw; opacity: 0; transition: 1s;">Suscripcion correcta. ¡Gracias! </span>
+				<span style="width: 100%; text-align: right; display: inline-block;">
+					¿Dudas o comentarios? <br>
+					Contáctanos al <a href="mailto:hola@failbox.mx?Subject=Contact" target="_top">hola@failbox.mx</a> <br> o al teléfono (33) 1818-3282 </span>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+
+<div class="botttomPrivacy" style="position:relative;">
+	<a href="aviso-de-privacidad"><span class="colour-green" >Condiciones de Uso - Aviso de Privacidad</span></a>
+	<br><br>
+	<span class="colour-white">
+		Derechos reservados 2016 | Failbox ® | BOXCORP Comercializadora y Distribuidora Digital de México S.A de C.V. <br>Av. Acueducto 4581 Int. 2.2. Corporativo Torre Andares Acueducto. Puerta de Hierro. Zapopan, Jalisco.
+	</span>
+	<a href="#top" class="ancla">
+	<div class="goTop">
+		<img src="./src/images/go_top.png">
+	</div>
+	</a>
+</div>
+
+<style media="screen">
+	.footer-right-side li a:hover{
+	 	cursor: pointer;
+	 	opacity: .5;
+	 }
+	@media (min-width: 768px) and (max-width: 1271px) {
+		.socialFailBox{
+		    padding-right: 5vw;
+		}
+		.bottomSite .navFailBox .logo{
+			width: 28vw !important;
+		}
+		.navFailBox{
+			padding-left: 5vw !important;
+		}
+
+	}
+	@media(max-width: 806px){
+		.navFailBox {
+		  margin: 0 auto;
+		  width: 85%;
+		}
+		img.img-responsive {
+		  margin: 0 auto;
+		}
+	}
+</style>

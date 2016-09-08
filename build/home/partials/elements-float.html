@@ -1,0 +1,75 @@
+<div class="gridCategories" ng-controller="topMenuController_">
+	<ul>
+		<div class="open_close"><img src="./src/images/botones y banner-16.png"></div>
+		<div ng-repeat="(key, menuProductos) in menuProductos">
+			<li><a href="productos/{{menuProductos.ruta}}"><span class="image"><img src="./src/images/{{menuProductos.icono}}"></span><span class="text">{{menuProductos.categoria}}</span></a></li>
+		</div>
+	</ul>
+</div>
+
+<div class="gridSerives">
+	<ul>
+		<div class="view_hiden"><img src="./src/images/botones y banner-02.png"></div>
+		<li class="image"><img src="./src/images/botones y banner-01.png"></li>
+	</ul>
+</div>
+
+<div class="gridSerives2">
+	<ul>
+		<div class="view_hiden2"><img src="./src/images/botones y banner-03.png"></div>
+		<li class="image selectOpenPopUp" ng-click="selectpopup(1)"><img src="./src/images/botones y banner-05.png"></li>
+    <li class="image selectOpenPopUp" ng-click="selectpopup(2)"><img src="./src/images/botones y banner-04.png"></li>
+    <li class="image"><a href="https://www.youtube.com/channel/UCX8-x0keJL2h9TBXd2kTNQQ" target="_blank"><img src="./src/images/botones y banner-06.png"></a></li>
+	</ul>
+</div>
+
+<!-- This element is under the banner -->
+<div class="marcasFb">
+  <img src="./src/images/Failbox Marcas.png">
+</div>
+
+<div class="marcas-mobile">
+	<div class="marcas-item">
+		<img src="./src/images/logo-03.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-01.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-02.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-04.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-05.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-06.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-07.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-08.png" alt="" />
+	</div>
+	<div class="marcas-item">
+		<img src="./src/images/logo-09.png" alt="" />
+	</div>
+</div>
+
+<div class="banner-1">
+	<img src="./src/images/botones y banner-01.png" alt="" />
+</div>
+
+<div class="banner-2">
+	<div class="item-banner-2 selectOpenPopUp" ng-click="selectpopup(1)">
+		<img src="./src/images/botones y banner-05.png" alt="" />
+	</div>
+	<div class="item-banner-2 selectOpenPopUp" ng-click="selectpopup(1)">
+		<img src="./src/images/botones y banner-04.png" alt="" />
+	</div>
+	<div class="item-banner-2" >
+		<a href="https://www.youtube.com/channel/UCX8-x0keJL2h9TBXd2kTNQQ" target="_blank"><img src="./src/images/botones y banner-06.png" alt="" /></a>
+	</div>
+</div>

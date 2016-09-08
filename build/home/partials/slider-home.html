@@ -1,0 +1,40 @@
+<!--div class="slider">
+
+<ul class="contenedor">
+
+<li class="itemBanner" ng-repeat="(key, data) in bannerMenu"  load-home-slider>
+<a href="{{data.link}}" target="_blank"><img src="./admin/images/bannersHome/{{data.image}}"></a>
+</li>
+
+</ul>
+
+<ul class="itemsSelecteds">
+<li class="groupItems" ng-repeat="(key, data) in bannerMenu">
+<img src="./src/images/selected.png" ng-if="$index == 0">
+<img src="./src/images/notselected.png" ng-if="$index != 0">
+</li>
+</ul>
+
+</div-->
+<link rel="stylesheet" href="./css/slide.css">
+
+<section class="slider-wrapper itemBanner">
+
+	<div class="touch-slider">
+
+		<div class="swiper-container swiper-home">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide" ng-repeat="data in bannerMenu" datos='{{data}}'>
+					<a href="{{data.link}}">
+						<img src="./admin/images/bannersHome/{{data.image}}">
+					</a>
+				</div>
+
+			</div>
+		</div>
+
+		<div class="pagination"></div>
+
+	</div>
+
+</section>

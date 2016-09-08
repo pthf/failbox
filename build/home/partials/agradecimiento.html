@@ -1,0 +1,32 @@
+<div class="gracias text-center" ng-controller="idPedidoCart">
+    <div class="container" id="idpedido_resumen" pedido="{{idPedido[0].IdPedido}}">
+        <div class="titulo">
+            GRACIAS POR TU COMPRA
+        </div>
+
+        <div class="img">
+            <img src="./src/images/carrito/box.png" />
+        </div>
+        <div class="texto-secundario col-md-12">
+            <div class="texto-1 col-md-12">
+                <h2> ¡Felicidades! En esta compra ahorraste {{idPedido[0].TotalNot - idPedido[0].Total| currency}}</h2>
+            </div>
+            <div class="texto-2 col-md-12">
+                <h3>
+                    Recibirás un correro de confirmación con los datos<br>
+                    de tu compra y el código de seguimiento.
+                </h3>
+            </div>
+            <div class="text-img col-md-12">
+                <div class="col-md-12 arbol">
+                    <img src="./src/images/carrito/arbol.png" alt="" />
+                </div>
+                <small>Por cada 6 compras FAILBOX plantará un árbol</small>
+            </div>
+        </div>
+        <h3 class="titulo-relacionados col-md-12 text-left">
+            Productos Relacionados con tu compra
+        </h3>
+        <slider-cart-feactured ng-controller="sliderFeacturedProductsController" ng-if="loadingData"></slider-cart-feactured>
+    </div>
+</div>

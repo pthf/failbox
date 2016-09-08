@@ -1,0 +1,27 @@
+{
+  "name": "failbox",
+  "version": "1.0.0",
+  "description": "E-Commerce FailBox",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gmocamarena/FAILBOX.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gmocamarena/FAILBOX/issues"
+  },
+  "homepage": "https://github.com/gmocamarena/FAILBOX#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.0",
+    "gulp-minify-css": "^1.2.4",
+    "gulp-stylus": "^2.3.1",
+    "gulp-webserver": "^0.9.1",
+    "nib": "^1.1.0"
+  }
+}

@@ -1,0 +1,13 @@
+<div class="mi_carrito carrito" ng-controller="getListItemsCart">
+    <div class="container">
+        <div ng-if="itemsCart == ''">
+            <div class="titulo carrito-vacio">
+                <h1>LO SENTIMOS, TU COMPRA FUE CANCELADA.</h1>
+                <h2><a href="productos">
+                    <button class="btn btn-success btn-lg">¡Comienza a comprar de nuevo!</button>
+                </a></h2>
+            </div>
+        </div>
+    </div>
+    <slider-cart-feactured ng-controller="sliderFeacturedProductsController" ng-if="loadingData" ng-class="{'fullwidth':itemsCart}"></slider-cart-feactured>
+</div>

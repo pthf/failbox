@@ -1,0 +1,14 @@
+npm init
+
+npm install stylus -g
+npm install gulp -g
+
+gulpfile.js
+
+npm install gulp --save-dev
+npm install --save-dev gulp-webserver
+npm install --save-dev gulp-stylus
+npm install --save-dev nib
+npm install --save-dev gulp-minify-css
+npm install --save-dev gulp-autoprefixer
+
