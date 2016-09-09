@@ -674,7 +674,7 @@ footer {
   }
 }
 .nav-sm footer {
-  margin-left: 70px ;  
+  margin-left: 70px ;
 }
 .tile-stats.sparkline {
   padding: 10px;
@@ -1345,7 +1345,7 @@ ul.msg_list li a .message {
   border: 1px solid #D9DEE4;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
-  
+
 }
 .dropdown-menu>li>a {
   color: #5A738E;
@@ -5332,6 +5332,6 @@ ul.notifications {
   height: 14em;
 }
 .img_details {
- width: 12em; 
+ width: 12em;
  height: 9em;
 }
