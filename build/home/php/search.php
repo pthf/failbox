@@ -16,11 +16,14 @@ if (isset($_GET['search'])) {
 						INNER JOIN Subcategoria s ON s.IdSubcategoria = p.Subcategoria_IdSubcategoria
 						INNER JOIN Marcas m ON m.IdMarca = p.Marcas_IdMarca
 						AND p.Estatus = 'Activo'
+			            AND p.Stock > 0
 						WHERE p.NombreProd LIKE '%" . $texto[$i] . "%'
 			            OR p.RouteProd LIKE '%" . $texto[$i] . "%'
 			            OR c.Categoria LIKE '%" . $texto[$i] . "%'
 			            OR s.Subcategoria LIKE '%" . $texto[$i] . "%'
-			            OR m.Marca LIKE '%" . $texto[$i] . "%'";
+			            OR m.Marca LIKE '%" . $texto[$i] . "%'
+			            OR p.Modelo LIKE '%" . $texto[$i] ."%'
+			            OR p.SKU LIKE '%" . $texto[$i] ."%'";
 
 			$resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
 

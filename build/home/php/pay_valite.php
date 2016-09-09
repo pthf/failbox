@@ -103,7 +103,7 @@
                 $to = "francisco@paratodohayfans.com";
                 $subject = 'Compra Online FAILBOX';
                 $message = "<html><head></head><body>";
-                $message .= "<h1><img src='http://failbox.mx/test/admin/images/logo_failbox.png' width='200px' height='auto'></h1>";
+                $message .= "<h1><img src='http://failbox.mx/home/test/admin/images/logo_failbox.png' width='200px' height='auto'></h1>";
                 $message .= "<span style='font-family:Gotham-Light;'>Gracias por su interes en los Productos de Failbox. <br>Su Orden ha sido recibida y será procesada una vez el Pago haya sido confirmado.</span>";
                 ?>
                 <?php
@@ -174,7 +174,7 @@
                         $images = explode(',', $line5['Image']);
                         $message .= "
                               <tr>
-                                <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'><img src='http://failbox.mx/test/admin/images/products/".$images[0]."' width='80px' height='auto'></td>
+                                <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'><img src='http://failbox.mx/home/admin/images/products/".$images[0]."' width='80px' height='auto'></td>
                                 <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'>".$line5['NombreProd']."</td>
                                 <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'>".$line5['Modelo']."</td>
                                 <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'>".$line5['Cantidad']."</td>
@@ -212,7 +212,7 @@
                             </table>";
 
                     $message .= "<div style='position: relative;width: 70%;height: 2%;padding-top: 2vw;padding-bottom: 2vw;background: #70B153;text-align: center;font-family: 'Gotham-Light';font-size: 1.1em;'>
-                                    <span style='font-family:Gotham-Light;color: #FFFFFF;display: inline-block;padding-left: 3vw;padding-right: 3vw;font-weight: bold;'>©2016 FAILBOX - <a href='http://failbox.mx/test/' style='color:#58595B'>Compra más</a></span>
+                                    <span style='font-family:Gotham-Light;color: #FFFFFF;display: inline-block;padding-left: 3vw;padding-right: 3vw;font-weight: bold;'>©2016 FAILBOX - <a href='http://failbox.mx/home/' style='color:#58595B'>Compra más</a></span>
                                 </div>";
 
                 }else{
@@ -234,7 +234,7 @@
                 $email_failbox = "hola@failbox.mx";
                 $subject = '!Tienda Failbox Online¡';
                 $message = "<html><head></head><body>";
-                $message .= "<h1><img src='http://failbox.mx/test/admin/images/logo_failbox.png' width='200px' height='auto'></h1>";
+                $message .= "<h1><img src='http://failbox.mx/home/admin/images/logo_failbox.png' width='200px' height='auto'></h1>";
                 $message .= "<span style='font-family:Gotham-Light;'>Gracias ".$nombre_cliente.' '.$apellidos_cliente." por tu compra en Failbox.<br>Proporcionaste los números teléfonicos: $telefono_cliente - $telefono_cliente_cel.<br></span>";
                 $message .= "<span style='font-family:Gotham-Light;'><br></span>";
                 $message .= "<span style='font-family:Gotham-Light;'>Tu orden de pedido es '".$orden_pedido."' por favor guárdalo para futuras aclaraciones.</span><br>";
@@ -313,7 +313,7 @@
                         $images = explode(',', $line5['Image']);
                         $message .= "
                               <tr>
-                                <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'><img src='http://failbox.mx/test/admin/images/products/".$images[0]."' width='80px' height='auto'></td>
+                                <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'><img src='http://failbox.mx/home/admin/images/products/".$images[0]."' width='80px' height='auto'></td>
                                 <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'>".$line5['NombreProd']."</td>
                                 <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'>".$line5['Modelo']."</td>
                                 <td style='border: 1px solid #97999c;border-collapse: collapse;padding: 5px;text-align: center;font-family:Gotham-Light;'>".$line5['Cantidad']."</td>
@@ -351,7 +351,7 @@
                             </table>";
 
                     $message .= "<div style='position: relative;width: 70%;height: 2%;padding-top: 2vw;padding-bottom: 2vw;background: #70B153;text-align: center;font-family: 'Gotham-Light';font-size: 1.1em;'>
-                                    <span style='font-family:Gotham-Light;color: #FFFFFF;display: inline-block;padding-left: 3vw;padding-right: 3vw;font-weight: bold;'>©2016 FAILBOX - <a href='http://failbox.mx/test/' style='color:#58595B'>Compra más</a></span>
+                                    <span style='font-family:Gotham-Light;color: #FFFFFF;display: inline-block;padding-left: 3vw;padding-right: 3vw;font-weight: bold;'>©2016 FAILBOX - <a href='http://failbox.mx/home/' style='color:#58595B'>Compra más</a></span>
                                 </div>";
 
                 }else{
@@ -362,7 +362,7 @@
 
                 $headers = "From: " . strip_tags($email_failbox) . "\r\n";
                 $headers .= "Reply-To: ". strip_tags($to) . "\r\n";
-                $headers .= "CC: ".$email_failbox."\r\n";
+                $headers .= "CC: 'pepe@paratodohayfans.com'\r\n";
                 $headers .= "MIME-Version: 1.0\r\n";
                 $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
 

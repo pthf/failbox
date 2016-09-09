@@ -363,6 +363,14 @@
 			});
 		}])
 
+		.controller('sliderRelatedProducts', ['$scope', 'failboxService', function($scope, failboxService){
+			$scope.loadingData = false;
+			failboxService.related_products().then(function(data){
+				$scope.itemsCart = data;
+				$scope.loadingData = true;
+			});
+		}])
+
 		.controller('getProductsCart', ['$scope', 'failboxService', function($scope, failboxService){
 			$scope.loadingData = false;
 			failboxService.cart_isset().then(function(data){

@@ -846,11 +846,12 @@
 							$(document).on('change', '#formDatesSend div input[name=typeAddress]', function(e){
 								var value = $(this).val();
 								if(value.length==0){
-									$(this).css({'border' : '2px solid red !important'});
+									// $(".typeAddress").css({'border' : '1px solid red !important'});
+									$("#typeAddress").css({'border':'2px solid red !important'});
 									$(this).siblings('.msgError').text("Agrega un tipo de dirección.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -863,7 +864,7 @@
 									$(this).siblings('.msgError').text("Agrega un estado.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1404,9 +1405,9 @@
 			controller: function($document){
 				 setTimeout(function(){
 				 	idpedido = $("#idpedido_resumen").attr('pedido');
-				 	if (idpedido == '') {
-				 		window.location.href = "productos";
-				 	}
+				 	// if (idpedido == '') {
+				 	// 	window.location.href = "productos";
+				 	// }
 				// 	// else{
 				// 	// 	$.ajax({
 				//  //          	beforeSend: function(){

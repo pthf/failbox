@@ -199,7 +199,6 @@
                       	<?php 
                       	$query1 = "SELECT * FROM DatosEnvios de 
                       				INNER JOIN Pedidos pe ON pe.IdPedido = de.IdPedido 
-                      				INNER JOIN Usuarios u ON u.IdUsuario = pe.Usuarios_IdUsuario
                       				WHERE de.IdPedido = '".$idpedido."'";
                       	$result1 = mysql_query($query1,Conectar::con()) or die(mysql_error());
                       	$row1 = mysql_fetch_array($result1);

@@ -214,7 +214,7 @@
                             if ($_SESSION['idPrivilegio'] == 1) {
                               $query = "SELECT * FROM Pedidos pe
                                           INNER JOIN DatosEnvios d ON d.IdPedido = pe.IdPedido
-                                          INNER JOIN Usuarios u ON u.IdUsuario = pe.Usuarios_IdUsuario WHERE pe.Status = '0' ORDER BY pe.IdPedido DESC";
+                                          WHERE pe.Status = '0' ORDER BY pe.IdPedido DESC";
                               $resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
                               while($fila = mysql_fetch_array($resultado)) { ?>
                               <tr>
