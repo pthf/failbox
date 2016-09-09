@@ -23,7 +23,7 @@
                     <div class="titulo">{{list.nombre_producto}}</div>
                     <div class="descripcion">{{list.descripcion_producto | limitTo: 30}}...</div>
                     <div class="cantidad">Cantidad: {{list.cantidad}}</div>
-                    <div class="precio">Subtotal: {{(list.precio * list.cantidad) | currency}}</div>
+                    <div class="precio">Subtotal: <br> {{(list.precio * list.cantidad) | currency}}</div>
                 </div>
 
             </div>
