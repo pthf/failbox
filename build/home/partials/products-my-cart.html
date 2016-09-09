@@ -22,14 +22,14 @@
                     <div class="col-md-3 col-sm-3 col-xs-3 texto col-xs-4 item-desc">
                         {{itemsCart.nombre_producto}}
                     </div>
-                    <div class="producto-wrap col-sm-3 col-md-3 col-xs-3">
+                    <div class="producto-wrap col-sm-12 col-md-12 col-xs-12">
                         <div class=" col-md-12 precio text-center">
                             <div class="text-center precio_lista"><s>{{itemsCart.precio_lista | currency }}</s></div>
                             <div class="text-center precio">{{itemsCart.precio | currency}}</div>
                         </div>
                     </div>
 
-                    <div class="contador col-xs-3 col-sm-3 col-md-3 contador">
+                    <div class="contador col-xs-12 col-sm-12 col-md-12 contador">
                         <div class="producto-wrap">
                             <a id="menos_" name="{{itemsCart.id_producto}}" data-quantity="1" class="cont menos_" style="cursor:pointer;"><img src="./src/images/carrito/min.png" /></a>
                             <input type="text" class="cantindad" name="cantidad" id="cantidad" value="{{itemsCart.cantidad}}">

@@ -234,7 +234,7 @@
 
 .containerDescription{
   margin: 0 auto;
-  width: 70%;
+  width: 80%;
 }
 
 .containerDescription .text{
@@ -246,7 +246,7 @@
 
 .textDeco{
   display: block !important;
-  width: 90% !important;
+  width: 90%;
   text-align: left !important;
   font-weight: bold;
 }
@@ -424,6 +424,19 @@
   background: transparent;
 }
 
+.gridComoComprar div span.text{
+  text-align: center;
+}
+
+.gridComoComprar div span{
+  text-align: justify;
+}
+
+img.icon-featured {
+  text-align: center;
+  margin: 10px 0;
+}
+
 @media(max-width: 1680px){
   .containerDescription{
     margin: 0 auto;
@@ -488,7 +501,7 @@
 
   .containerDescription{
     font-size: 1em;
-    width: 60%;
+    width: 90%;
     margin-top: 10px;
     margin-bottom: 10px;
   }
@@ -501,6 +514,31 @@
 
 
 @media(max-width: 768px){
+
+  span.title.textDeco {
+    margin: 6px 0;
+    font-size: 14px;
+  }
+
+  .gridComoComprar div span.text{
+    width: 60%;
+  }
+  .textDeco{
+    text-align: center;
+    width: auto;
+  }
+
+  .gridComoComprar div span.image {
+    width: 100%;
+    height: auto;
+    margin-right: 0%;
+    text-align: center;
+  }
+
+  .gridComoComprar div span.image img {
+    width: 33%;
+    height: auto;
+  }
 
   .carrito .productos .producto{
     height: auto;
@@ -614,13 +652,17 @@
 
   .containerDescription{
     font-size: 1em;
-    width: 70%;
+    width: 90%;
     margin-top: 25px;
     margin-bottom: 25px;
   }
 }
 
 @media(max-width: 480px){
+
+    .gridComoComprar div span.text{
+      width: 75%;
+    }
 
    .carrito .titulo{
      padding: 20px 0;
@@ -637,14 +679,14 @@
    .carrito .titulo,.carrito .titulo-footer{
      font-size: 24px;
    }
-   
+
   .categoriesFailbox ul li{
     width: 44%;
   }
 
   .containerDescription{
     font-size: .8em;
-    width: 100%;
+    width: 95%;
     margin-top: 10px;
     margin-bottom: 10px;
   }
