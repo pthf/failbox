@@ -193,8 +193,8 @@ div.item .imgBox{
 	margin: 0 auto;
 	background: #FFF;
 	position: relative;
-	-webkit-transition: 1s;
-	transition: 1s;
+	-webkit-transition: .3s;
+	transition: .3s;
 }
 
 div.item .imgBox img{
@@ -208,11 +208,11 @@ div.item .imgBox img.imgInfo{
 	position: absolute;
 	top: 27%;
 	left: 35%;
-	width: 30% !important;
-	height: auto;
+	width: 60px !important;
+	height: 60px !important;
 	opacity: 0;
-	-webkit-transition: 1s;
-	transition: 1s;
+	-webkit-transition: .3s;
+	transition: .3s;
 	z-index: 999;
 }
 
