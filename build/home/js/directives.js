@@ -896,6 +896,32 @@
 								}
 							});
 
+							$(document).on('change', '#formDatesSend div input[name=street_one]', function(e){
+								var value = $(this).val();
+								if(value.length==0){
+									$(this).css({'border' : '2px solid red'});
+									$(this).siblings('.msgError').text("Agrega una calle.");
+									$(this).attr('data-status', 'denied');
+								}else{
+									$(this).css({ 'border' : '2px solid #6EB153'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}
+							});
+
+							$(document).on('change', '#formDatesSend div input[name=street_two]', function(e){
+								var value = $(this).val();
+								if(value.length==0){
+									$(this).css({'border' : '2px solid red'});
+									$(this).siblings('.msgError').text("Agrega una calle.");
+									$(this).attr('data-status', 'denied');
+								}else{
+									$(this).css({ 'border' : '2px solid #6EB153'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}
+							});
+
 							$(document).on('change', '#formDatesSend div input[name=colony]', function(e){
 								var value = $(this).val();
 								if(value.length==0){
@@ -1014,6 +1040,8 @@
 								var status_state = $('#formDatesSend div input[name=state]').attr('data-status');
 								var status_city = $('#formDatesSend div input[name=city]').attr('data-status');
 								var status_address = $('#formDatesSend div input[name=address]').attr('data-status');
+								var status_street_one = $('#formDatesSend div input[name=street_one]').attr('data-status');
+								var status_street_two = $('#formDatesSend div input[name=street_two]').attr('data-status');
 								var status_colony = $('#formDatesSend div input[name=colony]').attr('data-status');
 								var status_cp = $('#formDatesSend div input[name=cp]').attr('data-status');
 								var status_name = $('#formDatesSend div input[name=name]').attr('data-status');
@@ -1022,7 +1050,7 @@
 								// var status_tel = $('#formDatesSend div input[name=tel]').attr('data-status');
 								var status_cel = $('#formDatesSend div input[name=cel]').attr('data-status');
 
-								if(status_typeAddress == 'acepted' && status_state == 'acepted' && status_city == 'acepted' && status_address == 'acepted' && status_colony == 'acepted'
+								if(status_typeAddress == 'acepted' && status_state == 'acepted' && status_city == 'acepted' && status_address == 'acepted' && status_street_one == 'acepted' && status_street_two == 'acepted' && status_colony == 'acepted'
 								&& status_cp == 'acepted' && status_name == 'acepted' && status_lastname == 'acepted' && status_email == 'acepted' && status_cel == 'acepted'){
 									var ajaxData = new FormData();
 									ajaxData.append("action", $(this).serialize());
@@ -1106,6 +1134,32 @@
 								if(value.length==0){
 									$(this).css({'border' : '2px solid red'});
 									$(this).siblings('.msgError').text("Agrega una dirección completa.");
+									$(this).attr('data-status', 'denied');
+								}else{
+									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}
+							});
+
+							$(document).on('change', '#formDatesSend_ div input[name=street_one]', function(e){
+								var value = $(this).val();
+								if(value.length==0){
+									$(this).css({'border' : '2px solid red'});
+									$(this).siblings('.msgError').text("Agrega una calle.");
+									$(this).attr('data-status', 'denied');
+								}else{
+									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}
+							});
+
+							$(document).on('change', '#formDatesSend_ div input[name=street_two]', function(e){
+								var value = $(this).val();
+								if(value.length==0){
+									$(this).css({'border' : '2px solid red'});
+									$(this).siblings('.msgError').text("Agrega una calle.");
 									$(this).attr('data-status', 'denied');
 								}else{
 									$(this).css({ 'border' : '2px solid #6EB153 !important'});
@@ -1230,6 +1284,8 @@
 								var status_state = $('#formDatesSend_ div input[name=state]').attr('data-status');
 								var status_city = $('#formDatesSend_ div input[name=city]').attr('data-status');
 								var status_address = $('#formDatesSend_ div input[name=address]').attr('data-status');
+								var status_street_one = $('#formDatesSend_ div input[name=street_one]').attr('data-status');
+								var status_street_two = $('#formDatesSend_ div input[name=street_two]').attr('data-status');
 								var status_colony = $('#formDatesSend_ div input[name=colony]').attr('data-status');
 								var status_cp = $('#formDatesSend_ div input[name=cp]').attr('data-status');
 								var status_name = $('#formDatesSend_ div input[name=name]').attr('data-status');
@@ -1238,7 +1294,7 @@
 								// var status_tel = $('#formDatesSend_ div input[name=tel]').attr('data-status');
 								var status_cel = $('#formDatesSend_ div input[name=cel]').attr('data-status');
 
-								if(status_typeAddress == 'acepted' && status_state == 'acepted' && status_city == 'acepted' && status_address == 'acepted' && status_colony == 'acepted'
+								if(status_typeAddress == 'acepted' && status_state == 'acepted' && status_city == 'acepted' && status_address == 'acepted' && status_street_one == 'acepted' && status_street_two == 'acepted' && status_colony == 'acepted'
 								&& status_cp == 'acepted' && status_name == 'acepted' && status_lastname == 'acepted' && status_email == 'acepted' && status_cel == 'acepted'){
 									var ajaxData = new FormData();
 									ajaxData.append("action", $(this).serialize());

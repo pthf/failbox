@@ -690,7 +690,8 @@
           }
 
           $query2 = "UPDATE DatosEnvios SET TipoDireccion='".$formData['typeAddress']."',Estado='".$formData['state']."',Ciudad='".$formData['city']."',
-                                            Direccion='".$formData['address']."',Colonia='".$formData['colony']."',CP='".$formData['cp']."',
+                                            Direccion='".$formData['address']."',CalleUno='".$formData['street_one']."',CalleDos='".$formData['street_two']."',
+                                            Colonia='".$formData['colony']."',CP='".$formData['cp']."',
                                             Telefono='".$formData['tel']."',Celular='".$formData['cel']."',Nombre='".$formData['name']."',Apellido='".$formData['lastname']."',
                                             Email='".$formData['email']."' WHERe IdPedido='".$_SESSION['id_pedido']."'";
           $result2 = mysql_query($query2,Conectar::con()) or die(mysql_error());                                  
@@ -716,7 +717,8 @@
             }
 
             $query4 = "INSERT INTO DatosEnvios VALUES (null,'".$formData['typeAddress']."', '".$formData['state']."', '".$formData['city']."', 
-                                                    '".$formData['address']."', '".$formData['colony']."', '".$formData['cp']."', 
+                                                    '".$formData['address']."', '".$formData['street_one']."', '".$formData['street_two']."', 
+                                                    '".$formData['colony']."', '".$formData['cp']."', 
                                                     '".$formData['tel']."','".$formData['cel']."', '".$formData['name']."', '".$formData['lastname']."', 
                                                     '".$formData['email']."','".$idPedido."')";
             $result4 = mysql_query($query4,Conectar::con()) or die(mysql_error());
