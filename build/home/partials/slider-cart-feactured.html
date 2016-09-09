@@ -8,6 +8,7 @@
 
 			<div class="groupItems" ng-repeat="(key, data) in itemsCart" load-slider-cart-feactured>
 				<div class="item" ng-repeat="subdata in data.data">
+				<div class="show-porcent ng-binding">-{{porcent}}%</div>
 					<a href="articulo/{{subdata.url}}">
 						<div class="imgBox" style="position: relative;">
 							<img src="./admin/images/products/{{subdata.image}}">

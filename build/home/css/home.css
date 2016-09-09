@@ -139,6 +139,7 @@ a:hover{
 }
 
 .contItemsPosition .groupItems{
+	position: relative;
 	width: 100%;
 	height: auto;
 	display: -webkit-flex;
@@ -174,6 +175,7 @@ a:hover{
 	width: 25%;
 	height: auto;
 	text-align: center;
+	position: relative;
 }
 
 .contItemsPosition div.itemFilters{
@@ -945,7 +947,7 @@ li.footer-option b{
 	height: 10vw;
 }
 
-.contInformation .show-porcent{
+.show-porcent{
 	background-color: #58595b;
 	text-align: center;
 	width: 3.75vw;
@@ -1716,7 +1718,7 @@ iframe {
     width: 640px;
 	}
 
-	.contInformation .show-porcent{
+	.show-porcent{
 		background-color: #58595b;
 		text-align: center;
 		width: 4vw;
@@ -1811,7 +1813,7 @@ iframe {
 		padding-top: 8vw;
 	}
 
-	.contInformation .show-porcent{
+	.show-porcent{
 		width: 6vw;
 		height: 6vw;
 	}
@@ -1823,7 +1825,7 @@ iframe {
 	    width: 90%;
 	}
 
-	.contInformation .show-porcent{
+	.show-porcent{
 		width: 7vw;
 		height: 7vw;
 	}
@@ -1843,7 +1845,7 @@ iframe {
 
 	}
 
-	.contInformation .show-porcent{
+	.show-porcent{
 		width: 10vw;
 		height: 10vw;
 	}
