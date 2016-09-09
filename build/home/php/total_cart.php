@@ -21,10 +21,10 @@ if (isset($_SESSION['total_carrito'])) {
 		'costo_envio' => $costo_envio,
 		'total_price' => $total_price,
 		'total' =>	$total,
-		'total_descuento' => $_SESSION['total_carrito']
+		'total_descuento' => $total
 		);
 	}
-	
+	// print_r(json_encode($_SESSION['carrito']));
 	print_r(json_encode($arrayName));
 	// print_r(json_encode($costo_envio));
 	// print_r(json_encode($total_price));

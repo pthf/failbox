@@ -500,7 +500,7 @@ top-menu{
 }
 
 .cartBar div.nav .cantidad{
-	border-radius: 50%;
+	border-radius: 100%;
 	width: 75%;
 	height: 75%;
 	display: block;
