@@ -243,6 +243,8 @@
 
 @media (max-width: 1024px){
 
+
+
 	.goTop{
 		width: 3vw;
 		height: 3vw;
@@ -408,6 +410,13 @@
 }
 
 @media (max-width: 1023px){
+
+	div.item .imgBox img.imgInfo {
+    top: 16%;
+    left: 44%;
+    width: 35px !important;
+    height: 35px !important;
+	}
 	.flex-aside-left-menu{
 		display:none;
 	}
@@ -440,8 +449,8 @@
 		margin-top: 2vw;
 	}
 	div.item .imgBox img{
-		width: 25vw !important;
-		height: 25vw !important;
+		width: 50px !important;
+		height: 50px !important;
 	}
 	.item .descritem, .item .price_not, .item .price_yes{
 		font-size: 1.8em;
@@ -606,8 +615,8 @@
 	}
 
 	div.item .imgBox img{
-		width: 15vw;
-		height: 15vw;
+		width: 25px;
+		height: 25px;
 	}
 
 	.sliderStore .sliderContenido .imageInfo img{
@@ -695,6 +704,10 @@
 }
 
 @media (max-width: 640px){
+
+	div.item .imgBox img.imgInfo {
+    left: 38%;
+	}
 
 	.goTop{
 		top: 5%;
@@ -1039,11 +1052,50 @@
 
 }
 
+@media(max-width: 768px){
+
+	.datos-envio .titulo{
+		font-size: 28px !important;
+		text-align: center;
+		padding: 25px 0 !important;
+	}
+
+	.titleDiv {
+    text-align: center;
+    font-size: 22px;
+		margin-top: 4.5vw;
+	}
+
+	span.titleHome {
+	  padding: 0;
+		font-size: 1.4em;
+	}
+
+	.categoriesFailbox{
+		margin-top: 0;
+	}
+
+}
+
+@media(max-width: 640px){
+	.datos-envio .titulo{
+		font-size: 24px !important;
+	}
+}
+
 @media (max-width: 485px){
+
+	.datos-envio .titulo{
+		font-size: 22px !important;
+	}
+
 	.content-swiper{
 		width: 100% !important;
 	}
 
+	span.titleHome {
+		font-size: 1em;
+	}
 	.topMenu .cartBar{
 		position: absolute !important;
 		top: 20px !important;
@@ -1057,5 +1109,11 @@
 @media (max-width: 991px) {
 	.contInformation .infoArticulo .contador-detalle-producto{
 		margin-top: 6vw;
+	}
+
+	.datos-envio .titulo{
+		margin: 0 auto;
+		text-align: center;
+		padding: 35px 0 !important;
 	}
 }

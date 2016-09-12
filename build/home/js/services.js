@@ -37,6 +37,17 @@
 			return deferred.promise;
 		}
 
+		function related_products(){
+			var deferred = $q.defer();
+
+			$http.get('./php/related_products.php')
+			.success(function (data) {
+				deferred.resolve(data);
+			});
+
+			return deferred.promise;
+		}
+
 		function products_cart(){
 			var deferred = $q.defer();
 
@@ -265,6 +276,17 @@
 			return deferred.promise;
 		}
 
+		function cartSales() {
+			var deferred = $q.defer();
+
+			$http.get('./php/cartSales.php')
+			.success(function (data) {
+				deferred.resolve(data);
+			});
+
+			return deferred.promise;
+		}
+
 		return {
 			sliderHome: sliderHome,
 			new_products: new_products,
@@ -287,7 +309,9 @@
 			getIdPedido: getIdPedido,
 			verificar_existencia_session: verificar_existencia_session,
 			verificar_existencias_global: verificar_existencias_global,
-			cart_isset: cart_isset
+			cart_isset: cart_isset,
+			related_products: related_products,
+			cartSales: cartSales
 		}
 
 	}]);

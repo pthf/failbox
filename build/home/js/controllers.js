@@ -363,6 +363,14 @@
 			});
 		}])
 
+		.controller('sliderRelatedProducts', ['$scope', 'failboxService', function($scope, failboxService){
+			$scope.loadingData = false;
+			failboxService.related_products().then(function(data){
+				$scope.itemsCart = data;
+				$scope.loadingData = true;
+			});
+		}])
+
 		.controller('getProductsCart', ['$scope', 'failboxService', function($scope, failboxService){
 			$scope.loadingData = false;
 			failboxService.cart_isset().then(function(data){
@@ -377,6 +385,7 @@
 			$scope.loadingDataPedido = false;
 			$scope.datesPedidoCart = false;
 			$scope.totalCart = 0.0;
+			$scope.itemsCartSales = false;
 			failboxService.products_cart().then(function(data){
 
 				$scope.itemsCart = data;
@@ -395,6 +404,9 @@
 			});
 			failboxService.total_cart().then(function(data){
 				$scope.totalCart = data;
+			});
+			failboxService.cartSales().then(function(data){
+				$scope.itemsCartSales = data;
 			});
 		}])
 

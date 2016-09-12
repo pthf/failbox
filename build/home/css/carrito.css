@@ -122,6 +122,7 @@
 .datos-envio {
   font-family: 'Gotham-Light'; }
   .datos-envio .titulo {
+    width: 100%;
     font-size: 32px;
     padding: 50px 0;
     font-family: 'Gotham-Bold';
