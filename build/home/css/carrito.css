@@ -361,7 +361,26 @@
 
 
 @media (max-width: 991px){
+  .resumen{
+    width: 70% !important;
+    margin-left: 15% !important;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 5vw !important;
+  }
 
+  .container{
+    display: flex;
+    flex-direction: column-reverse;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+  }
+
+  .statusListFlew{
+
+  }
 }
 
 @media (max-width: 767px){
@@ -371,6 +390,14 @@
     min-width: 50%;
     margin: 0 auto;
   }
+
+  .resumen{
+    width: 80% !important;
+    margin-left: 10% !important;
+  }
+
+
+
 }
 
 
@@ -380,6 +407,17 @@
   .mi_carrito .productos .producto {
     font-size: 2vw; } }
 @media (max-width: 480px) {
+
+  .resumen{
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+
+  .resumen .detalle{
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+
   .buy-slide {
     right: 0;
     width: 100%;
