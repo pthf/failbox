@@ -1510,6 +1510,7 @@
 					var idItemCart = $(this).attr('name');
 					disminuir_item_cart(idItemCart);
 					actualizar_carrito();
+					verify_cupon();
 				});
 
 				$(document).on('click', '.mas_', function(){
@@ -1529,6 +1530,7 @@
 							if(result==1 || result==-1){
 								incrementar_item_cart(idItemCart);
 								actualizar_carrito();
+								verify_cupon();
 								// actualizar_carrito_confirmar(idItemCart,quantity);
 							} else if(result == 0){
 								alert('No hay existencias');
@@ -1784,6 +1786,7 @@
 				if(result==1 || result==-1){
 					agregar_producto(idProduct,notprice,quantity,sub_total);
 					actualizar_carrito();
+					verify_cupon();
 					if($('.buy-slide:hidden')){
 						var height =  document.getElementById('menutopmain').offsetHeight;
 						$('.buy-slide').css('margin-top', height+'px');
@@ -1848,6 +1851,27 @@
 
 				// alert(data);
 				// $('.cart_').html(data);
+			},
+			error: function(){
+			},
+			complete: function(){
+			},
+			timeout: 10000
+		});
+	}
+
+	function verify_cupon(){
+		$.ajax({
+			beforeSend: function(){
+				//location.reload();
+			},
+			url: "./php/functions_cart.php",
+			type: "POST",
+			data: {
+				namefunction:'verify_cupon'
+			},
+			success: function(data){
+				alert(data);
 			},
 			error: function(){
 			},

@@ -244,6 +244,11 @@
             						  <div class="col-md-2 col-md-pull-3"><h4>Costo de envio:</h4></div>
             						  <div class="col-md-3 col-md-push-2"><h4 style="color:#777">$ <?=$row1['Total'];?>.00</h4></div>
             						  <div class="col-md-2 col-md-pull-3"><h4>Total:</h4></div>
+                          
+                          <div class="col-md-3 col-md-push-2"><h4 style="color:#777"><?=$row1['OrdenPedido']?></h4></div>
+                          <div class="col-md-2 col-md-pull-3"><h4>Id Orden:</h4></div>
+                          <div class="col-md-3 col-md-push-2"><h4 style="color:#777"><?=$row1['FechaPedido'];?></h4></div>
+                          <div class="col-md-2 col-md-pull-3"><h4>Fecha Pedido:</h4></div>
             						</div>
                         <div class="clearfix"></div>
                       </div>
@@ -251,7 +256,7 @@
                         <table id="" class="table table-striped table-bordered dt-responsive" cellspacing="0" width="100%">
                           <thead>
                             <tr>
-                              <th>#</th>
+                              <th>#IdProducto</th>
                               <th>Imagen</th>
                               <th>Nombre</th>
                               <th>Dirección</th>

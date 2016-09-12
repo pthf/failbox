@@ -1,6 +1,6 @@
 <div class="resumen-compra carrito" ng-controller="getListItemsCart">
 
-    <div class="container" id="idpedido_resumen" pedido="{{idPedido}}">
+    <div class="container" id="idpedido_resumen" pedido="{{idPedido.IdPedido}}">
         <div ng-if="itemsCart == ''" >
             <div class="titulo carrito-vacio">
                 <h1>NO TIENES PRODUCTOS EN TU CARRITO.</h1>
@@ -61,7 +61,6 @@
                 </div>
 
 
-
             </div>
             <div class="opciones col-md-12 col-sm-12 col-xs-12">
                 <br>
@@ -81,15 +80,16 @@
                         <input type="hidden" name="business" value="hola@failbox.mx">
                         <!-- <input type="hidden" name="business" value="hola-facilitator@failbox.mx"> -->
                         <input type="hidden" name="item_name" value="Compras Failbox - {{itemsCartSales}}">
+                        <input type="hidden" name="item_number" value="{{idPedido.IdOrden}}">
                         <input type="hidden" name="currency_code" value="MXN">
                         <input ng-if="totalCart.total == totalCart.total_descuento" type="hidden" name="amount" value="{{totalCart.total | currency}}">
                         <input ng-if="totalCart.total != totalCart.total_descuento" type="hidden" name="amount" value="{{totalCart.total_descuento | currency}}">
-                        <input type="hidden" name="return" value="http://failbox.mx/home/gracias/{{idPedido}}">
-                        <!-- <input type="hidden" name="return" value="http://failbox.mx/test/home/gracias/{{idPedido}}"> -->
-                        <input type="hidden" name="cancel_return" value="http://failbox.mx/home/php/cancelado.php?num={{idPedido}}">
-                        <!-- <input type="hidden" name="cancel_return" value="http://failbox.mx/test/home/php/cancelado.php?num={{idPedido}}"> -->
-                        <input type="hidden" name="notify_url" value="http://failbox.mx/home/php/pay_valite.php?num={{idPedido}}">
-                        <!-- <input type="hidden" name="notify_url" value="http://failbox.mx/test/home/php/pay_valite.php?num={{idPedido}}"> -->
+                        <input type="hidden" name="return" value="http://failbox.mx/home/gracias/{{idPedido.IdPedido}}">
+                        <!-- <input type="hidden" name="return" value="http://failbox.mx/test/home/gracias/{{idPedido.IdPedido}}"> -->
+                        <input type="hidden" name="cancel_return" value="http://failbox.mx/home/php/cancelado.php?num={{idPedido.IdPedido}}">
+                        <!-- <input type="hidden" name="cancel_return" value="http://failbox.mx/test/home/php/cancelado.php?num={{idPedido.IdPedido}}"> -->
+                        <input type="hidden" name="notify_url" value="http://failbox.mx/home/php/pay_valite.php?num={{idPedido.IdPedido}}">
+                        <!-- <input type="hidden" name="notify_url" value="http://failbox.mx/test/home/php/pay_valite.php?num={{idPedido.IdPedido}}"> -->
 
                         <input type="image" src="./src/images/carrito/paypal.jpg" name="submit" alt="Make payments with PayPal - it's fast, free and secure!">
                     </form>
