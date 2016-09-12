@@ -449,8 +449,8 @@
 		margin-top: 2vw;
 	}
 	div.item .imgBox img{
-		width: 50px !important;
-		height: 50px !important;
+		width: 150px !important;
+		height: 150px !important;
 	}
 	.item .descritem, .item .price_not, .item .price_yes{
 		font-size: 1.8em;
@@ -704,6 +704,11 @@
 }
 
 @media (max-width: 640px){
+
+	div.item .imgBox img{
+		width: 125px !important;
+		height: 125px !important;
+	}
 
 	div.item .imgBox img.imgInfo {
     left: 38%;
@@ -991,11 +996,12 @@
     margin-bottom: 6vw;
 	}
 
-
+	div.item .imgBox img{
+		width: 90px !important;
+		height: 90px !important;
+	}
 
 }
-
-
 
 @media(min-width: 807px){
 	.bottomSite .navFailBox{
@@ -1032,6 +1038,7 @@
 		right: 15px;
 		width: 30px;
 	}
+
 }
 
 @media (max-width: 640px) {
@@ -1042,7 +1049,6 @@
 		width: 25px;
 	}
 }
-
 
 @media (min-width: 485px) and (max-width: 768px) {
 
