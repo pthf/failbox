@@ -76,12 +76,12 @@
   padding-left: 10px;
   cursor: pointer;
   -webkit-transition: .3s;
-  transition: .3s;
-  background: #6EB153;
+  transition: 1s;
+  background: #58595B;
 }
 
 .gridCategories ul li:hover{
-  background: #58595B;
+  background: #6EB153;
 }
 
 .gridCategories ul li.title{

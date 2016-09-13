@@ -762,6 +762,16 @@
 					$('.groupAllItems img').attr('src','./src/images/viewmore-aside.png');
 					$(this).attr('src','./src/images/viewmore.png');
 				});
+				setTimeout(function(){
+					var asideHeight = $('.cont-search-product').height();
+					$('.subCategoryList').css({'height' : asideHeight+'px'});
+					$('.submenuCategories').slideUp(0);
+				},250);
+				$(document).on('click', '.itemCategory', function(){
+					$('.submenuCategories').slideUp(500);
+					$('.submenuCategories', this).slideDown(500);
+				});
+
 				// //$(document).on('click', 'span.category', function(){
 				// $('span.category').click(function(){
 				// 	$('ul.subcategoryList').slideUp();
