@@ -89,7 +89,7 @@
         width: 100%;
         height: auto;
         display: block;
-        max-width: 120px; }
+        max-width: 100%; }
     .carrito .productos .producto .contador .cont {
       padding: 0 10px; }
       .carrito .productos .producto .contador .cont img {

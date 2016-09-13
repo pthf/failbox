@@ -446,7 +446,7 @@ img.icon-featured {
 }
 
 .imgLoading img {
-  width: 50%;
+  width: 30%;
   height: auto;
 }
 
@@ -483,7 +483,7 @@ img.icon-featured {
 @media(max-width: 1024px){
 
   .imgLoading img {
-    width: 60%;
+    width: 50%;
     height: auto;
   }
 
@@ -528,6 +528,14 @@ img.icon-featured {
 
 
 @media(max-width: 768px){
+
+  .texto.row.resumen-de-compra {
+    font-size: 28px;
+    font-family: 'Gotham-Bold';
+    color: #6EB153;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
 
   .imgLoading img {
     width: 80%;

@@ -70,6 +70,10 @@ a:hover{
 	justify-content: flex-end;
 }
 
+.url.textDeco{
+	text-align: center !important;
+}
+
 .rightItem{
 	-webkit-justify-content: flex-start;
 	-ms-flex-pack: start;
@@ -1789,7 +1793,8 @@ iframe {
 		font-size: 23px !important;
 	}
 	.faqs .sub{
-		font-size: 8px;
+		font-size: 12px;
+		font-weight: 600;
 		padding: 0 5px !important;
 	}
 	.faqs ul{
