@@ -160,7 +160,7 @@
                 </div>
             </div>
             <div ng-if="itemsCart">
-                <div class="texto row">
+                <div class="texto row resumen-de-compra">
                     Resúmen de compra
                 </div>
                 <div class="detalle row col-sm-12 col-xs-12">
@@ -180,10 +180,10 @@
                     </div>
                     <div class="principal row" style="margin-top: 10px;">
                         <div class="col-md-12 producto col-sm-12 col-xs-12" ng-repeat="(key, itemsCart) in itemsCart">
-                            <div class="imagen col-md-4 col-sm-4 col-xs-5">
+                            <div class="imagen col-md-4 col-sm-12 col-xs-12">
                                 <img class="img-responsive" src="./admin/images/products/{{itemsCart.foto_producto}}" alt="" />
                             </div>
-                            <div class="descripcion col-md-8 col-sm-8 col-xs-7">
+                            <div class="descripcion col-md-8 col-sm-12 col-xs-12">
                                 <div class="d-texto col-md-12 col-sm-12 col-xs-12">
                                     {{itemsCart.nombre_producto}}
                                 </div>
