@@ -16,6 +16,7 @@
             <div class="productos">
                 <div class="producto container-fluid vertical-align" ng-repeat="(key, itemsCart) in itemsCart">
                     <span class="close deleteItemCart" name="{{itemsCart.id_producto}}"><img src="./src/images/carrito/mas_info.png" /></span>
+
                     <div class="col-md-8 col-sm-8 col-xs-8 imagen text-center">
                         <img src="./admin/images/products/{{itemsCart.foto_producto}}" />
                     </div>
@@ -29,7 +30,8 @@
                         </div>
                     </div>
 
-                    <div class="contador col-xs-12 col-sm-12 col-md-8 contador">
+                    <div class="contador col-xs-12 col-sm-12 col-md-12 contador" >
+
                         <div class="producto-wrap">
                             <a id="menos_" name="{{itemsCart.id_producto}}" data-quantity="1" class="cont menos_" style="cursor:pointer;"><img src="./src/images/carrito/min.png" /></a>
                             <input type="text" class="cantindad" name="cantidad" id="cantidad" value="{{itemsCart.cantidad}}">

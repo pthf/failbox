@@ -17,3 +17,4 @@ while ($row = mysql_fetch_array($resultado)) {
 }
 print_r(json_encode($categorias));
 ?>
+

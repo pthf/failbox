@@ -1,4 +1,19 @@
-<ul class="groupAllItems">
+<ul class="subCategoryList" ng-controller="topMenuController_">
+  <li ng-repeat="(key, menuProductos) in menuProductos" class="itemCategory">
+    <span class="imageCategory"><img src="./src/images/{{menuProductos.icono}}"></span>
+    <span class="nameCategory">{{menuProductos.categoria}}</span>
+    <ul class="submenuCategories">
+      <li class="itemSubcategories"><span class="namesubCategory">Example</span></li>
+      <a href="productos/{{menuProductos.ruta}}">
+        <li class="itemSubcategories">
+          <span class="namesubCategory">Todo de {{menuProductos.categoria}}</span>
+        </li>
+      </a>
+    <ul>
+  </li>
+</ul>
+
+<!-- <ul class="groupAllItems">
   <li class="categoryList" ng-repeat="(key, data) in menuProductos" load-group-products-items>
     <span ng-repeat="(key, data) in data">
       <span class="category" style="cursor:pointer;" name="{{key}}">
@@ -30,4 +45,14 @@
       </ul>
     </span>
   </li>
-</ul>
+</ul> -->
+
+
+<!-- <div class="gridCategories" ng-controller="topMenuController_">
+	<ul>
+		<div class="open_close"><img src="./src/images/botones y banner-16.png"></div>
+		<div ng-repeat="(key, menuProductos) in menuProductos">
+			<li><a href="productos/{{menuProductos.ruta}}"><span class="image"><img src="./src/images/{{menuProductos.icono}}"></span><span class="text">{{menuProductos.categoria}}</span></a></li>
+		</div>
+	</ul>
+</div> -->

@@ -204,6 +204,15 @@
 			return deferred.promise;
 		}
 
+		function showMenuCategoriesIcon() {
+			var deferred = $q.defer();
+			$http.get('./php/menu_products.php')
+			.success(function (data) {
+				deferred.resolve(data);
+			});
+			return deferred.promise;
+		}
+
 		function cart_isset() {
 			var deferred = $q.defer();
 			$http.get('./php/cart_isset.php')
@@ -311,7 +320,8 @@
 			verificar_existencias_global: verificar_existencias_global,
 			cart_isset: cart_isset,
 			related_products: related_products,
-			cartSales: cartSales
+			cartSales: cartSales,
+			showMenuCategoriesIcon: showMenuCategoriesIcon
 		}
 
 	}]);

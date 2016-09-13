@@ -1328,7 +1328,6 @@ li.footer-option b{
 
 .flex-aside-left-menu{
 	width: 20%;
-	height: auto;
 	background: #58595B;
 	color: #FFF;
 }
@@ -2109,4 +2108,79 @@ span.returnSpan{
 .returnSpan:hover{
 	cursor: pointer;
 	opacity: .5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.subCategoryList{
+	padding: 0;
+	margin: 0;
+	font-size: 1.5em;
+	width: 100%;
+	height: 20vw;
+	overflow: auto;
+	margin: 0 auto;
+}
+
+.subCategoryList ul, .subCategoryList li{
+	padding: 0 !important;
+	margin: 0 !important;
+	list-style: none !important;
+	text-decoration: none !important;
+	position: relative;
+}
+
+.subCategoryList li.itemCategory{
+	background: #58595B;
+	transition: 1s;
+	border-bottom: 1px solid #FFF;
+}
+
+.subCategoryList li.itemCategory:hover{
+	cursor: pointer;
+	background: #6EB153;
+}
+
+.subCategoryList span.imageCategory{
+	display: inline-block;
+	width: 10%;
+	height: auto;
+	margin: 5px;
+}
+
+.subCategoryList span.nameCategory{
+	display: inline-block;
+	width: 85%;
+	height: auto;
+	color: #FFF;
+}
+
+.subCategoryList span img{
+	width: 100%;
+	height: auto;
+}
+
+.submenuCategories li{
+	padding: 10px !important;
+	transition: 1s;
+	background: #6EB153;
+	cursor: pointer;
+	border-top: 1px solid #FFF;
+}
+
+.submenuCategories li:hover{
+	background: #58595B;
+}
+
+.subCategoryList a, .subCategoryList a:hover{
+	color: #FFF;
 }
