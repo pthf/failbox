@@ -2159,7 +2159,7 @@ span.returnSpan{
 
 .subCategoryList span.nameCategory{
 	display: inline-block;
-	width: 85%;
+	width: 80%;
 	height: auto;
 	color: #FFF;
 }
@@ -2183,4 +2183,50 @@ span.returnSpan{
 
 .subCategoryList a, .subCategoryList a:hover{
 	color: #FFF;
+}
+
+
+.coverAlert{
+	z-index: -10;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+	transition: 0s;
+	opacity: 0;
+}
+
+.coverAlert span.info{
+	display: block;
+	width: 70%;
+	padding-top: 4vw;
+	padding-bottom: 4vw;
+	color: #000;
+	background: #FFF;
+	text-align: center;
+	position: relative;
+}
+
+.coverAlert span.info .imageclose{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	width: 1.8em;
+	height: auto;
+}
+
+.coverAlert span.info .imageclose:hover{
+	cursor: pointer;
+	opacity: .5;
+}
+
+.coverAlert span.info .imageclose img{
+	width: 100%;
+	height: auto;
 }

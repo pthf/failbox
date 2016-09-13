@@ -17,7 +17,8 @@
     $dataAuxCat = array(
       'icono' => $lineCat['Icono'],
       'url' => $lineCat['RouteCategoria'],
-      $lineCat['Categoria']  => $arrayDataSubCat
+      'name' => $lineCat['Categoria'],
+      'subcategories'  => $arrayDataSubCat
     );
     array_push($arrayDataCat, $dataAuxCat);
     unset($dataAuxCat);

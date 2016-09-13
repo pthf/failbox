@@ -27,6 +27,13 @@
 <body ng-controller="connectFacebookController">
 	<div class="contenedor" ng-controller="homeSliderController">
 
+		<!-- This elements is to display all the alert by the site -->
+		<div class="coverAlert">
+			<span class="info">
+				<div class="imageclose"><img src="./src/images/close2.jpg"></div>
+				<span class="text"></span>
+			</span>
+		</div>
 		<!-- This element is part form loading gif -->
 		<div class="capaModalRun">
 			<div class="imgLoading" style="width: 18%; height: auto;"><img src="./src/images/1.gif" style="width: 100%; height: auto;"></div>
@@ -93,6 +100,14 @@
 		$(document).on('click', '.continueDisabled', function(){
 			$('.capaModalRun').css({'opacity' : '0','z-index' : '-10'});
 			$('html,body').css({'overflow':'auto'});
+		});
+
+		//Close popup error
+		$(document).on('click', '.imageclose', function(){
+			$('.coverAlert').css({
+				'z-index' : '-10',
+				'opacity' : '0'
+			});
 		});
 	</script>
 
