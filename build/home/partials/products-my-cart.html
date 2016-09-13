@@ -53,5 +53,10 @@
             </div>
         </div>
     </div>
-    <slider-cart-feactured ng-controller="sliderFeacturedProductsController" ng-if="loadingData" ng-class="{'fullwidth':itemsCart}"></slider-cart-feactured>
+    <div ng-if="itemsCart == ''">
+        <slider-cart-feactured ng-controller="sliderNewProductsController" ng-if="loadingData" ng-class="{'fullwidth':itemsCart}"></slider-cart-feactured>
+    </div>
+    <div ng-if="itemsCart">
+        <slider-cart-related ng-controller="sliderRelatedProducts" ng-if="loadingData" ng-class="{'fullwidth':itemsCart}"></slider-cart-related>
+    </div>
 </div>

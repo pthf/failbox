@@ -478,6 +478,8 @@
     function actualizar_carrito_confirmar(){
       $resultado = 1;
       if (isset($_SESSION['carrito'])) {
+        $total = 0;
+        $costo_envio = 0;
         foreach ($_SESSION['carrito'] as $key => $value) {
           $query = "SELECT Stock FROM Productos WHERE IdProducto = '".$value['id_producto']."'";
           $result = mysql_query($query,Conectar::con())or die(mysql_error());
@@ -495,6 +497,8 @@
           } else if ($value['cantidad'] > $row['Stock']) {
             $resultado = -1;
             $_SESSION['carrito'][$key]['cantidad'] = $row['Stock'];
+            $_SESSION['carrito'][$key]['sub_total'] = $_SESSION['carrito'][$key]['precio'] * $_SESSION['carrito'][$key]['cantidad'];
+
           } else {
             $total_stock = ($row['Stock'] - $value['cantidad']);
             $query = "UPDATE Productos SET Stock = '".$total_stock."' WHERE IdProducto = '".$value['id_producto']."'";
