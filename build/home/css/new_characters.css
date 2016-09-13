@@ -51,7 +51,7 @@
   left: 100%;
   z-index: 10;
   background: #58595B;
-  width: 1.6vw;
+  width: 2.6vw;
   max-width: 120px;
   height: auto;
   cursor: pointer;
@@ -131,8 +131,8 @@
 .view_hiden, .view_hiden2{
   position: absolute;
   top: 0;
-  left: -1.8vw;
-  width: 1.8vw;
+  left: -2.8vw;
+  width: 2.8vw;
   max-width: 120px;
   height: auto;
   z-index: 10;

@@ -216,6 +216,9 @@
 			failboxService.showMenuCategoriesLeft().then(function(data){
 				$scope.menuProductos = data;
 			});
+			failboxService.showMenuCategoriesIcon().then(function(data){
+				$scope.menuIconCategories = data;
+			});
 		}])
 
 		.controller('tabShowMenuTopController',['$scope', '$rootScope', function($scope, $rootScope){

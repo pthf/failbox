@@ -8,6 +8,9 @@ $productos = array();
 while ($row = mysql_fetch_array($resultado)) {
 
     $array_images = explode(',', $row['Image']);
+    $dif = $row['PrecioLista'] - $row['PrecioFailbox'];
+    $decimal = $dif/$row['PrecioLista'];
+    $porcent = round($decimal * 100);
 
     $producto = array(
                 "id" => $row['IdProducto'],
@@ -21,9 +24,10 @@ while ($row = mysql_fetch_array($resultado)) {
                 "image" => $array_images[0],
                 "images_slider" => $array_images,
                 "paypal" => $row['urlPaypal'],
+                "porcent" => $porcent
     );
     array_push($productos, $producto);
-    //$productos[] = $producto;
+    // $productos[] = $producto;
 }
 
 $arrayList = array();

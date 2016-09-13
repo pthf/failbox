@@ -1,140 +1,77 @@
 <div ng-controller="getProductsCart" id="cart" cart="{{valueCart}}">
-  <div class="container datos-envio statusListFlew" ng-controller="getListItemsCart">
-    <div>
-      <div class="titulo" id="idpedido_resumen" pedido="{{idPedido}}">
-        DATOS DE ENVÍO
-      </div>
-      <div class="formulario col-md-7 col-sm-12 form1" ng-show="idPedido">
-        <form class="form" method="post" id="formDatesSend_">
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <input id="typeAddress" data-status="acepted" class="form-control" type="text" value="{{datesPedido.TipoDireccion}}" placeholder="Tipo de Dirección (Ejemplo: Oficina, Casa)" name="typeAddress">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-5 col-sm-5 col-xs-12">
-            <input id="state" data-status="acepted" class="form-control" type="text" placeholder="Selecciona estado o región" value="{{datesPedido.Estado}}" name="state">
-            <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-7 col-sm-7 col-xs-12">
-            <input id="city" data-status="acepted" class="form-control" type="text" placeholder="Ciudad, delegación o municipio" value="{{datesPedido.Ciudad}}" name="city">
-            <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-12 col-sm-4 col-xs-12">
-            <input id="address" data-status="acepted" class="form-control" type="text" placeholder="Calle y Número" value="{{datesPedido.Direccion}}" name="address">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-4 col-xs-8">
-            <input id="colony" data-status="acepted" class="form-control" type="text" placeholder="Colonia" value="{{datesPedido.Colonia}}" name="colony">
-            <span style="color:red"  class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-4 col-xs-4">
-            <input id="cp" data-status="acepted" class="form-control" type="text" placeholder="C.P." value="{{datesPedido.CP}}" name="cp">
-            <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="titulo">
-            DATOS DE CONTACTO
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="name" data-status="acepted" class="form-control" type="text" placeholder="Nombre" value="{{datesPedido.Nombre}}" name="name">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="lastname" data-status="acepted" class="form-control" type="text" placeholder="Apellidos" value="{{datesPedido.Apellido}}" name="lastname">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <input id="email" data-status="acepted" class="form-control" type="text" value="{{datesPedido.Email}}" placeholder="Dirección de correo electrónico" name="email">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="tel" data-status="acepted" class="form-control" type="text" placeholder="Teléfono" value="{{datesPedido.Telefono}}" name="tel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="cel" data-status="acepted" class="form-control" type="text" placeholder="Celular" value="{{datesPedido.Celular}}" name="cel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <div style="color:red"class="result_cart"></div>
-          </div>
-          <span class="col-md-12 col-sm-12 col-xs-12">Campos obligatorios (*).</span>
-          <span class="msgErrorNoSend col-md-12 col-sm-12 col-xs-12" style="color:red"></span>
-          <div class="submit">
-            <button type="submit" class="btn btn-success btn-lg">Comprar ahora</button>
-          </div>
-        </form>
-      </div>
-      <div class="formulario col-md-7 col-sm-12 form2" ng-show="idPedido == ''">
-        <form class="form" method="post" id="formDatesSend">
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <input id="typeAddress" data-status="denied" class="form-control" type="text" value="" placeholder="* Tipo de Dirección (Ejemplo: Oficina, Casa)" name="typeAddress">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-5 col-sm-5 col-xs-12">
-            <input id="state" data-status="denied" class="form-control" type="text" placeholder="* Selecciona estado o región" value="" name="state">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-7 col-sm-7 col-xs-12">
-            <input id="city" data-status="denied" class="form-control" type="text" placeholder="* Ciudad, delegación o municipio" value="" name="city">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-12 col-sm-4 col-xs-12">
-            <input id="address" data-status="denied" class="form-control" type="text" placeholder="* Calle y Número" value="" name="address">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-4 col-xs-8">
-            <input id="colony" data-status="denied" class="form-control" type="text" placeholder="* Colonia" value="" name="colony">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-4 col-xs-4">
-            <input id="cp" data-status="denied" class="form-control" type="text" placeholder="* C.P." value="" name="cp">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="titulo">
-            DATOS DE CONTACTO
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-12">
-            <input id="name" data-status="denied" class="form-control" type="text" placeholder="* Nombre" value="" name="name">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-12">
-            <input id="lastname" data-status="denied" class="form-control" type="text" placeholder="* Apellidos" value="" name="lastname">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <input id="email" data-status="denied" class="form-control" type="text" value="" placeholder="* Dirección de correo electrónico" name="email">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="tel" data-status="acepted" class="form-control" type="text" placeholder="Teléfono" value="" name="tel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="cel" data-status="denied" class="form-control" type="text" placeholder="* Celular" value="" name="cel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
-          </div>
-          <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <div style="color:red"class="result_cart"></div>
-          </div>
-          <span class="col-md-12 col-sm-12 col-xs-12">Campos obligatorios (*).</span>
-          <span class="msgErrorNoSend col-md-12 col-sm-12 col-xs-12" style="color:red"></span>
-          <div class="submit">
-            <button  type="submit" class="btn btn-success btn-lg">Comprar ahora</button>
-          </div>
-        </form>
-      </div>
-    </div>
-    <div class="resumen col-md-4 col-md-offset-1 col-sm-12 col-xs-12" ng-controller="purchaseSummary">
-      <div ng-if="itemsCart == ''">
-        <div class="texto row">
-          No tienes productos en tu carrito.
+    <div class="container datos-envio" ng-controller="getListItemsCart">
+        <div class="titulo" id="idpedido_resumen" pedido="{{idPedido.IdPedido}}">
+            DATOS DE ENVÍO
         </div>
-      </div>
-      <div ng-if="itemsCart">
-        <div class="texto row">
-          Resúmen de compra
-        </div>
-        <div class="detalle row col-sm-12 col-xs-12">
-
+        <!-- <div ng-if="idPedido"> -->
+            <div class="formulario col-md-7 col-sm-12 form1" ng-show="idPedido">
+                <form class="form" method="post" id="formDatesSend_">
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <input id="typeAddress" data-status="acepted" class="form-control" type="text" value="{{datesPedido.TipoDireccion}}" placeholder="Tipo de Dirección (Ejemplo: Oficina, Casa)" name="typeAddress">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                        <input id="state" data-status="acepted" class="form-control" type="text" placeholder="Selecciona estado o región" value="{{datesPedido.Estado}}" name="state">
+                        <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-7 col-sm-7 col-xs-12">
+                       <input id="city" data-status="acepted" class="form-control" type="text" placeholder="Ciudad, delegación o municipio" value="{{datesPedido.Ciudad}}" name="city">
+                        <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-4 col-xs-12">
+                        <input id="address" data-status="acepted" class="form-control" type="text" placeholder="Calle y Número" value="{{datesPedido.Direccion}}" name="address">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-4 col-xs-12">
+                        <input id="street_one" data-status="acepted" class="form-control" type="text" placeholder="Entre la calle" value="{{datesPedido.CalleUno}}" name="street_one">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-4 col-xs-12">
+                        <input id="street_two" data-status="acepted" class="form-control" type="text" placeholder="Y la calle" value="{{datesPedido.CalleDos}}" name="street_two">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-4 col-xs-8">
+                        <input id="colony" data-status="acepted" class="form-control" type="text" placeholder="Colonia" value="{{datesPedido.Colonia}}" name="colony">
+                        <span style="color:red"  class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-4 col-xs-4">
+                        <input id="cp" data-status="acepted" class="form-control" type="text" placeholder="C.P." value="{{datesPedido.CP}}" name="cp">
+                        <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div><div class="titulo">
+                        DATOS DE CONTACTO
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input id="name" data-status="acepted" class="form-control" type="text" placeholder="Nombre" value="{{datesPedido.Nombre}}" name="name">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input id="lastname" data-status="acepted" class="form-control" type="text" placeholder="Apellidos" value="{{datesPedido.Apellido}}" name="lastname">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <input id="email" data-status="acepted" class="form-control" type="text" value="{{datesPedido.Email}}" placeholder="Dirección de correo electrónico" name="email">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input id="tel" data-status="acepted" class="form-control" type="text" placeholder="Teléfono" value="{{datesPedido.Telefono}}" name="tel">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-6 col-sm-6 col-xs-6">
+                        <input id="cel" data-status="acepted" class="form-control" type="text" placeholder="Celular" value="{{datesPedido.Celular}}" name="cel">
+                        <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+                    </div>
+                    <div class="form-group col-md-12 col-sm-12 col-xs-12">
+                        <div style="color:red"class="result_cart"></div>
+                    </div>
+                    <span class="col-md-12 col-sm-12 col-xs-12">Campos obligatorios (*).</span>
+                    <span class="msgErrorNoSend col-md-12 col-sm-12 col-xs-12" style="color:red"></span>
+                    <div class="submit">
+                        <button type="submit" class="btn btn-success btn-lg">Comprar ahora</button>
+                    </div>
+                </form>
+            </div>
+        <!-- </div> -->
+        <!-- <div ng-if="idPedido == ''"> -->
             <div class="formulario col-md-7 col-sm-12 form2" ng-show="idPedido == ''">
                 <form class="form" method="post" id="formDatesSend">
                     <div class="form-group col-md-12 col-sm-12 col-xs-12">
@@ -142,11 +79,22 @@
                         <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
                     </div>
                     <div class="form-group col-md-5 col-sm-5 col-xs-12">
+                        <!-- <select class="form-control" >
+                            <option value="" selected="selected">Selecciona estado o región</option>
+                            <option value="1">Jalisco</option>
+                            <option value="2">Nayarit</option>
+                        </select> -->
                         <input id="state" data-status="denied" class="form-control" type="text" placeholder="* Selecciona estado o región" value="" name="state">
                         <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
                     </div>
                     <div class="form-group col-md-7 col-sm-7 col-xs-12">
-                                 <input id="city" data-status="denied" class="form-control" type="text" placeholder="* Ciudad, delegación o municipio" value="" name="city">
+                        <!-- <select class="form-control" >
+                            <option disabled value="" selected="selected">Ciudad, delegación o municipio</option>
+                            <option value="1">Guadalajara</option>
+                            <option value="2">Zapopan</option>
+                            <option value="2">Nayarit</option>
+                        </select>
+         -->            <input id="city" data-status="denied" class="form-control" type="text" placeholder="* Ciudad, delegación o municipio" value="" name="city">
                         <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
                     </div>
                     <div class="form-group col-md-12 col-sm-4 col-xs-12">
@@ -203,51 +151,84 @@
 
                 </form>
             </div>
+        <!-- </div> -->
 
-          <div class="principal row" style="margin-top: 10px;">
-            <div class="col-md-12 producto col-sm-12 col-xs-12" ng-repeat="(key, itemsCart) in itemsCart">
-              <div class="imagen col-md-4 col-sm-4 col-xs-5">
-                <img class="img-responsive" src="./admin/images/products/{{itemsCart.foto_producto}}" alt="" />
-              </div>
-              <div class="descripcion col-md-8 col-sm-8 col-xs-7">
-                <div class="d-texto col-md-12 col-sm-12 col-xs-12" style="margin-bottom:5px;">
-                  {{itemsCart.nombre_producto}}
+        <div class="resumen col-md-4 col-md-offset-1 col-sm-12 col-xs-12" ng-controller="purchaseSummary">
+            <div ng-if="itemsCart == ''">
+                <div class="texto row">
+                    No tienes productos en tu carrito.
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:5px;">
-                  Cantidad : {{itemsCart.cantidad}}
+            </div>
+            <div ng-if="itemsCart">
+                <div class="texto row">
+                    Resúmen de compra
                 </div>
-                <div class="col-md-12 col-sm-12 col-xs-12" style="margin-bottom:5px;">
-                  Costo:<br>
-                  <s style="">{{(itemsCart.precio_lista * itemsCart.cantidad) | currency}}</s><br>
-                  <b style="font-family: 'Gotham-Bold'; text-weight: bold;">{{(itemsCart.precio * itemsCart.cantidad) | currency}}</b>
+                <div class="detalle row col-sm-12 col-xs-12">
+                    <div class="row">
+                        <span><a id="alternar-form-cupon" style="cursor:pointer" class="texto"><u>¿Tienes un cupón?</u></a></span>
+                        <div id="formCuponInput" style="display:none">
+                            <form class="form-inline" id="formCupon">
+                              <div class="form-group" style="padding-top: 5px;">
+                                <input required type="text" class="form-control" id="inputCodigo" name="cupon" placeholder="Aplica tu descuento" style="border: 1px solid #58595b !important;border-radius: 0;">
+                                <button type="submit" class="btn btn-success" style="font-size: 14px;">Enviar</button>
+                                <div class="nocupon" style="padding-top: 3%;color:red"></div>
+                                <div class="cuponvalido" style="padding-top: 3%;color:blue"></div>
+                              </div>
+                            </form>
+                            <hr style="margin-top: 15px;margin-bottom: 5px;border: 0;border-top: 1px solid #cecccc;">
+                        </div>
+                    </div>
+                    <div class="principal row" style="margin-top: 10px;">
+                        <div class="col-md-12 producto col-sm-12 col-xs-12" ng-repeat="(key, itemsCart) in itemsCart">
+                            <div class="imagen col-md-4 col-sm-4 col-xs-5">
+                                <img class="img-responsive" src="./admin/images/products/{{itemsCart.foto_producto}}" alt="" />
+                            </div>
+                            <div class="descripcion col-md-8 col-sm-8 col-xs-7">
+                                <div class="d-texto col-md-12 col-sm-12 col-xs-12">
+                                    {{itemsCart.nombre_producto}}
+                                </div>
+                                <div class="cantidad col-md-12 col-sm-12 col-xs-12">
+                                    CANTIDAD : {{itemsCart.cantidad}}
+                                </div>
+                                <div class="col-md-11 col-sm-12 col-xs-12">
+                                    <b>Costo: <s style="padding-left: 12%;padding-right: 12%;">{{(itemsCart.precio_lista * itemsCart.cantidad) | currency}}</s></b> <b style="font-family: 'Gotham-Bold';text-weight: bold;">{{(itemsCart.precio * itemsCart.cantidad) | currency}}</b>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="precio-envio col-md-12 col-sm-12 col-xs-12">
+                            <div class="texto-envio col-sm-6 col-xs-6">ENVÍO A DOMICILIO</div>
+                            <div class="total-envio col-sm-6 col-xs-6">
+                                <span style="color: #6EB153" ng-if="costShipping != 0">{{costShipping | currency}}</span>
+                                <span style="color: #6EB153" ng-if="costShipping == 0">¡Envio Gratis!</span>
+                            </div>
+                            <!-- <div class="total-envio col-sm-6 col-xs-6">{{costShipping | currency}}</div>-->
+                        </div>
+                        <div class="precio-envio col-md-12 col-sm-12 col-xs-12" ng-if="totalCart.total != totalCart.total_descuento">
+                            <div class="texto-envio col-sm-6 col-xs-6">CUPÓN APLICADO</div>
+                            <div class="total-envio col-sm-6 col-xs-6">
+                                <span style="color: #6EB153">15%</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="final text-right">
+                        <div class="total" id="total" total="{{totalCart.total}}" ng-if="totalCart.total == totalCart.total_descuento">
+                            <b>TOTAL: {{totalCart.total | currency}}</b>
+                            <!-- <b>TOTAL: {{totalCart.total | currency}}</b> -->
+                        </div>
+                        <div class="total" id="total" total="{{totalCart.total_descuento}}" ng-if="totalCart.total != totalCart.total_descuento">
+                            <b>TOTAL: {{totalCart.total_descuento | currency}}</b>
+                            <!-- <b>TOTAL: {{totalCart.total | currency}}</b> -->
+                        </div>
+                        <div class="ahorro" id="totalnot" totalnot="{{totalNotPrice}}">
+                            En esta compra ahorrarás {{totalNotPrice - totalCart.total_price | currency}}
+                        </div>
+                    </div>
+
                 </div>
-              </div>
             </div>
-
-            <div class="precio-envio col-md-12 col-sm-12 col-xs-12">
-              <div class="texto-envio col-sm-6 col-xs-6">ENVÍO A DOMICILIO</div>
-              <div class="total-envio col-sm-6 col-xs-6">
-                <span style="color: #6EB153" ng-if="costShipping != 0">{{costShipping | currency}}</span>
-                <span style="color: #6EB153" ng-if="costShipping == 0">¡Envio Gratis!</span>
-              </div>
-            </div>
-
-          </div>
-
-          <div class="final text-right">
-            <div class="total" id="total" total="{{totalCart.total}}" ng-if="totalCart.total == totalCart.total_descuento">
-              <b>TOTAL: {{totalCart.total | currency}}</b>
-            </div>
-            <div class="total" id="total" total="{{totalCart.total_descuento}}" ng-if="totalCart.total != totalCart.total_descuento">
-              <b>TOTAL: {{totalCart.total_descuento | currency}}</b>
-            </div>
-            <div class="ahorro" id="totalnot" totalnot="{{totalNotPrice}}">
-              En esta compra ahorrarás {{totalNotPrice - totalCart.total_price | currency}}
-            </div>
-          </div>
-
         </div>
-      </div>
     </div>
-  </div>
 </div>

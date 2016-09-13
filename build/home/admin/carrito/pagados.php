@@ -201,7 +201,7 @@
                         <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                           <thead>
                             <tr>
-                              <th>#</th>
+                              <th>#IdOrden</th>
                               <th>Nombre</th>
                               <th>Dirección</th>
                               <th>Status</th>
@@ -219,7 +219,7 @@
                               while($fila = mysql_fetch_array($resultado)) { ?>
                               <tr>
                                 <!-- <td><a href="../edit/editProduct.php?id=<?=$fila['IdProducto']?>"></a></td> -->
-                                <td><?php echo $fila['IdPedido']?></td>
+                                <td><?php echo $fila['OrdenPedido']?></td>
                                 <td><?php echo $fila['Nombre'].' '.$fila['Apellido']?></td>
                                 <td><?php echo $fila['Direccion']?></td>
                                 <td>Pagado <i class="fa fa-check"></i></td>
