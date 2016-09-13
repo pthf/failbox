@@ -1596,7 +1596,7 @@ textarea.form-item-1 {
 		resize: none;
 		margin-top: 1vw;
 		padding-left: .5vw;
-		border: 2px solid black;
+		border: 1px solid black;
 }
 
 select.form-item-4,input.form-item-4,textarea.form-item-1 {
