@@ -819,11 +819,11 @@
 						url: 'php/sendEmail.php',
 						data: data,
 						success : function(result){
-							$('#successMail').css('display', 'block');
-							setTimeout(function(){
-								$('#formContact')[0].reset();
-								$('#successMail').css('display', 'none');
-							}, 1500);
+							$('.coverAlert span.info span.text').text('Gracias por contactanos, muy pronto nos comunicaremos contigo.');
+							$('.coverAlert').css({
+								'z-index' : '10',
+								'opacity' : '1'
+							});
 						},
 						error: function(){
 							alert('error');
