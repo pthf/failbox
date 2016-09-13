@@ -17,13 +17,13 @@
                 <div class="producto container-fluid vertical-align" ng-repeat="(key, itemsCart) in itemsCart">
                     <span class="close deleteItemCart" name="{{itemsCart.id_producto}}"><img src="./src/images/carrito/mas_info.png" /></span>
 
-                    <div class="col-md-8 col-sm-8 col-xs-8 imagen text-center">
+                    <div class="col-md-12 col-sm-12 col-xs-12 imagen text-center">
                         <img src="./admin/images/products/{{itemsCart.foto_producto}}" />
                     </div>
-                    <div class="col-md-8 col-sm-12 col-xs-12 texto col-xs-4 item-desc">
+                    <div class="col-md-12 col-sm-12 col-xs-12 texto col-xs-12 item-desc">
                         {{itemsCart.nombre_producto}}
                     </div>
-                    <div class="producto-wrap col-sm-12 col-md-8 col-xs-12">
+                    <div class="producto-wrap col-sm-12 col-md-12 col-xs-12">
                         <div class=" col-md-12 precio text-center">
                             <div class="text-center precio_lista"><s>{{itemsCart.precio_lista | currency }}</s></div>
                             <div class="text-center precio">{{itemsCart.precio | currency}}</div>
@@ -32,10 +32,12 @@
 
                     <div class="contador col-xs-12 col-sm-12 col-md-12 contador" >
 
-                        <div class="producto-wrap">
+                        <div class="producto-wrap" >
+                          <div style="margin: 0 auto;">
                             <a id="menos_" name="{{itemsCart.id_producto}}" data-quantity="1" class="cont menos_" style="cursor:pointer;"><img src="./src/images/carrito/min.png" /></a>
                             <input type="text" class="cantindad" name="cantidad" id="cantidad" value="{{itemsCart.cantidad}}">
                             <a id="mas_" name="{{itemsCart.id_producto}}" data-quantity="1" class="cont mas_" style="cursor:pointer"><img src="./src/images/carrito/mor.png" /></a>
+                          </div>
                         </div>
                     </div>
                 </div>

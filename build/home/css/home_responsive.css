@@ -49,7 +49,7 @@
 	}
 
 	.topMenu .cartBar{
-		z-index: 9999;
+		z-index: 9;
 		width: 1.9%;
 	}
 
@@ -170,7 +170,7 @@
 	}
 
 	.topMenu .cartBar{
-		z-index: 99999;
+		z-index: 9;
 		width: 2.1%;
 	}
 	.selectIndicator{
@@ -214,12 +214,12 @@
 	}
 
 	.flex-aside-left-menu{
-		width: 30%;
+		width: 20%;
 
 	}
 
 	.flex-asise-right-items{
-		width: 70%;
+		width: 80%;
 	}
 
 	.groupAllItems{
@@ -308,7 +308,7 @@
 
 	.topMenu .cartBar{
 		width: 2.3%;
-		z-index: 9999;
+		z-index: 9;
 	}
 	.selectIndicator{
 		width: 6px;
@@ -365,11 +365,11 @@
 	}
 
 	.flex-aside-left-menu{
-		width: 30%;
+		width: 20%;
 	}
 
 	.flex-asise-right-items{
-		width: 70%;
+		width: 80%;
 	}
 
 	.groupAllItems{
@@ -599,11 +599,11 @@
 	}
 
 	.flex-aside-left-menu{
-		width: 40%;
+		width: 20%;
 	}
 
 	.flex-asise-right-items{
-		width: 60%;
+		width: 80%;
 	}
 
 	.groupAllItems{
@@ -804,11 +804,11 @@
 	}
 
 	.flex-aside-left-menu{
-		width: 40%;
+		width: 20%;
 	}
 
 	.flex-asise-right-items{
-		width: 60%;
+		width: 80%;
 	}
 
 	.groupAllItems{
@@ -898,7 +898,7 @@
 	}
 
 	.topMenu .cartBar{
-		z-index: 99999;
+		z-index: 9;
 		position: relative;
 		left: 25px;
 		bottom: 27px;
@@ -963,11 +963,11 @@
 	}
 
 	.flex-aside-left-menu{
-		width: 50%;
+		width: 20%;
 	}
 
 	.flex-asise-right-items{
-		width: 50%;
+		width: 80%;
 	}
 
 	.groupAllItems{
@@ -1035,6 +1035,8 @@
 	}
 }
 
+
+
 @media (min-width: 768px){
 	.ulmenuMobile{
 		display: none !important;
@@ -1078,6 +1080,11 @@
 		font-size: 28px !important;
 		text-align: center;
 		padding: 25px 0 !important;
+	}
+
+	.boton-enviar-class{
+		margin-top: 5px;
+		background: #6EB153;
 	}
 
 	.titleDiv {
@@ -1136,4 +1143,24 @@
 		text-align: center;
 		padding: 35px 0 !important;
 	}
+
+	.datos-envio{
+		display: -webkit-box !important;
+		display: -webkit-flex !important;
+		display: -ms-flexbox !important;
+		display: flex !important;
+		-webkit-box-orient: vertical !important;
+		-webkit-box-direction: reverse !important;
+		-webkit-flex-direction: column-reverse !important;
+		-ms-flex-direction: column-reverse !important;
+		flex-direction: column-reverse !important;
+		-webkit-flex-wrap: wrap !important;
+		-ms-flex-wrap: wrap !important;
+		flex-wrap: wrap !important;
+		-webkit-box-pack: center !important;
+		-webkit-justify-content: center !important;
+		-ms-flex-pack: center !important;
+		justify-content: center !important;
+	}
+
 }

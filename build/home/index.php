@@ -4,7 +4,8 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=nos">
-	<base href="http://localhost/www/failbox/build/home/">
+	<base href="http://localhost/www/failbox/failbox/build/home/">
+	<!-- <base href="http://localhost/failbox/build/home/"> -->
 	<title>FailBox - Lo que cuenta es lo de adentro.</title>
 	<link rel="shortcut icon" type="image/png" href="./src/images/favicon.png">
 	<link rel="stylesheet" type="text/css" href="./css/home.css">
@@ -27,6 +28,13 @@
 <body ng-controller="connectFacebookController">
 	<div class="contenedor" ng-controller="homeSliderController">
 
+		<!-- This elements is to display all the alert by the site -->
+		<div class="coverAlert">
+			<span class="info">
+				<div class="imageclose"><img src="./src/images/close2.jpg"></div>
+				<span class="text"></span>
+			</span>
+		</div>
 		<!-- This element is part form loading gif -->
 		<div class="capaModalRun">
 			<div class="imgLoading" style="height: auto;"><img src="./src/images/1.gif" style=" height: auto;"></div>
@@ -93,6 +101,14 @@
 		$(document).on('click', '.continueDisabled', function(){
 			$('.capaModalRun').css({'opacity' : '0','z-index' : '-10'});
 			$('html,body').css({'overflow':'auto'});
+		});
+
+		//Close popup error
+		$(document).on('click', '.imageclose', function(){
+			$('.coverAlert').css({
+				'z-index' : '-10',
+				'opacity' : '0'
+			});
 		});
 	</script>
 

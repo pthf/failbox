@@ -1,12 +1,16 @@
 <ul class="subCategoryList" ng-controller="topMenuController_">
-  <li ng-repeat="(key, menuProductos) in menuProductos" class="itemCategory">
+  <li ng-repeat="(key, menuProductos) in menuIconCategories" class="itemCategory">
     <span class="imageCategory"><img src="./src/images/{{menuProductos.icono}}"></span>
-    <span class="nameCategory">{{menuProductos.categoria}}</span>
+    <span class="nameCategory">{{menuProductos.name}}</span>
     <ul class="submenuCategories">
-      <li class="itemSubcategories"><span class="namesubCategory">Example</span></li>
-      <a href="productos/{{menuProductos.ruta}}">
+      <li class="itemSubcategories" ng-repeat="nameSubcategory in menuProductos.subcategories">
+        <a href="productos/{{menuProductos.url}}/{{data}}" ng-repeat="(key2, data) in nameSubcategory">
+          <span class="namesubCategory" >{{key2}}</span>
+        </a>
+      </li>
+      <a href="productos/{{menuProductos.url}}">
         <li class="itemSubcategories">
-          <span class="namesubCategory">Todo de {{menuProductos.categoria}}</span>
+          <span class="namesubCategory">Todo de {{menuProductos.name}}</span>
         </li>
       </a>
     <ul>
