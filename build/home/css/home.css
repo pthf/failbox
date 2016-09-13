@@ -2236,3 +2236,7 @@ span.returnSpan{
 	width: 100%;
 	height: auto;
 }
+
+.navbar-static-top{
+	z-index: 1 !important;
+}
