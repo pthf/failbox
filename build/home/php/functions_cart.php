@@ -67,9 +67,9 @@
       case 'registrar_cupon':
         registrar_cupon();
         break;
-      case 'verify_cupon':
-        verify_cupon();
-        break;
+      // case 'verify_cupon':
+      //   verify_cupon();
+      //   break;
     }
 
     function verify_max_stock($idProduct, $cantidad){
@@ -437,12 +437,39 @@
             $costo_envio = $costo_envio + $_SESSION['carrito'][$i]['costo_envio'];
           }
 
+          // echo '
+          //         <div class="act_cont">
+          //           <div class="total_buy">
+          //             <span>TOTAL</span>
+          //           </div>
+          //               <span class="price_total">$'.number_format($total,2,".",",").'</span>
+          //               <a href="carrito.php"> <span class="gotocart">IR AL CARRITO</span> </a>
+          //               <span class="alertaCapMax"></span>
+          //           </div>
+          //   ';
+
           // $_SESSION['costo_envio'] = $costo_envio;
           $total_total = $total + $costo_envio;
           $_SESSION['total_carrito'] = $total_total;
           $_SESSION['carrito'] = $_SESSION['carrito'];
           $_SESSION['expire']=time();
 
+        }else{
+
+          echo "No hay sesion actualizar_carrito";
+          echo '
+            <div class="g_cart_cont"><br>
+              <div class="price_total">
+                <span>NO HAZ AGREGADO NINGÚN PRODUCTO.</span>
+              </div><br>
+              <div class="total_buy">
+                <span>TOTAL</span>
+              </div>
+              <span class="price_total">$00.00</span>
+              </div>
+              <span class="alertaCapMax"></span>
+          ';
+          
         }
 
     }
@@ -780,13 +807,21 @@
       }
     }
 
-    function verify_cupon(){
-      if (isset($_SESSION['descuento-aplicado']) == 1) {
-        echo "Existe";
-      } else {
-        echo "No existe";
-      }
-    }
-
+    // function verify_cupon() {
+    //   if (isset($_SESSION['descuento-aplicado']) == 1) {
+    //     echo "Existe descuento aplicado";
+    //     if (isset($_SESSION['id_pedido'])) {
+    //       $descuento = ($_SESSION['total_carrito'] * $_SESSION['descuento'])/100;
+    //       $precio_descuento = $_SESSION['total_carrito'] - $descuento;
+    //       print_r($precio_descuento);
+    //       // echo "Existe ID PEDIDO";
+    //     } else {
+    //       $descuento = ($_SESSION['total_carrito'] * $_SESSION['descuento'])/100;
+    //       $precio_descuento = $_SESSION['total_carrito'] - $descuento;
+    //       print_r($precio_descuento);
+    //       // echo "No hay pedido por el momento";
+    //     }
+    //   }
+    // }
 
 ?>

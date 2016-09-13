@@ -204,6 +204,12 @@
                             </div>
                             <!-- <div class="total-envio col-sm-6 col-xs-6">{{costShipping | currency}}</div>-->
                         </div>
+                        <div class="precio-envio col-md-12 col-sm-12 col-xs-12" ng-if="totalCart.total != totalCart.total_descuento">
+                            <div class="texto-envio col-sm-6 col-xs-6">CUPÓN APLICADO</div>
+                            <div class="total-envio col-sm-6 col-xs-6">
+                                <span style="color: #6EB153">15%</span>
+                            </div>
+                        </div>
 
                     </div>
 
