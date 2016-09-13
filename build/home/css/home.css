@@ -70,6 +70,10 @@ a:hover{
 	justify-content: flex-end;
 }
 
+.url.textDeco{
+	text-align: center !important;
+}
+
 .rightItem{
 	-webkit-justify-content: flex-start;
 	-ms-flex-pack: start;
@@ -215,7 +219,7 @@ div.item .imgBox img.imgInfo{
 	opacity: 0;
 	-webkit-transition: .3s;
 	transition: .3s;
-	z-index: 999;
+	z-index: 9;
 }
 
 .item .descritem{
@@ -301,7 +305,7 @@ top-menu{
 
 .topMenu .logoFailBox{
 	width: 20%;
-	z-index: 99999999;
+	z-index: 9;
 }
 
 .logoFailBox div.img{
@@ -1578,8 +1582,9 @@ ul.groupAllItems span{
 }
 
 ::-webkit-input-placeholder {
-		color: black;
-		font-weight: 200;
+	color: black;
+	font-weight: 200;
+	opacity: 0.6;	
 }
 
 select.form-item-4{
@@ -1600,7 +1605,7 @@ textarea.form-item-1 {
 }
 
 select.form-item-4,input.form-item-4,textarea.form-item-1 {
-		border-color: gray;
+    border: 1px solid black;
 		border-radius: 0;
 		outline: none;
 		-webkit-appearance: none;
@@ -1789,7 +1794,8 @@ iframe {
 		font-size: 23px !important;
 	}
 	.faqs .sub{
-		font-size: 8px;
+		font-size: 12px;
+		font-weight: 600;
 		padding: 0 5px !important;
 	}
 	.faqs ul{

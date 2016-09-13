@@ -37,7 +37,7 @@
 		</div>
 		<!-- This element is part form loading gif -->
 		<div class="capaModalRun">
-			<div class="imgLoading"><img src="./src/images/1.gif"></div>
+			<div class="imgLoading" style="height: auto;"><img src="./src/images/1.gif" style=" height: auto;"></div>
 		</div>
 		<!-- This element will work like a popup to show information -->
 		<div class="capa">

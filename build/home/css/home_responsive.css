@@ -49,7 +49,7 @@
 	}
 
 	.topMenu .cartBar{
-		z-index: 9999;
+		z-index: 9;
 		width: 1.9%;
 	}
 
@@ -170,7 +170,7 @@
 	}
 
 	.topMenu .cartBar{
-		z-index: 99999;
+		z-index: 9;
 		width: 2.1%;
 	}
 	.selectIndicator{
@@ -308,7 +308,7 @@
 
 	.topMenu .cartBar{
 		width: 2.3%;
-		z-index: 9999;
+		z-index: 9;
 	}
 	.selectIndicator{
 		width: 6px;
@@ -425,7 +425,7 @@
 	}
 
 	.goTop{
-		top: 25%;
+		top: 10%;
 		width: 3.5vw;
 		height: 3.5vw;
 	}
@@ -898,7 +898,7 @@
 	}
 
 	.topMenu .cartBar{
-		z-index: 99999;
+		z-index: 9;
 		position: relative;
 		left: 25px;
 		bottom: 27px;

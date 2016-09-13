@@ -1,7 +1,7 @@
 <?php
 if(isset($_POST['email'])) {
 
-$email_to = "failbox@failbox.com";
+$email_to = "hola@failbox.mx";
 $email_subject = "Contacto Failbox";
 
 if(!isset($_POST['nombre']) ||
