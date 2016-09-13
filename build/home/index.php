@@ -4,7 +4,8 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=nos">
-	<base href="http://localhost/www/failbox/failbox/build/home/">
+	<!-- <base href="http://localhost/www/failbox/failbox/build/home/"> -->
+	<base href="http://localhost/failbox/build/home/">
 	<title>FailBox - Lo que cuenta es lo de adentro.</title>
 	<link rel="shortcut icon" type="image/png" href="./src/images/favicon.png">
 	<link rel="stylesheet" type="text/css" href="./css/home.css">
@@ -29,7 +30,7 @@
 
 		<!-- This element is part form loading gif -->
 		<div class="capaModalRun">
-			<div class="imgLoading" style="width: 18%; height: auto;"><img src="./src/images/1.gif" style="width: 100%; height: auto;"></div>
+			<div class="imgLoading"><img src="./src/images/1.gif"></div>
 		</div>
 		<!-- This element will work like a popup to show information -->
 		<div class="capa">
