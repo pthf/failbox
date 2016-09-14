@@ -244,6 +244,36 @@
 		}
 	})
 
+	.directive('failboxList', function(){
+		return{
+			restrict: 'E',
+			templateUrl: './partials/failbox-list.html',
+			controller: function($document){
+				$('.faqs li div.answer').slideUp(0);
+				$('.faqs li div.question').click(function(){
+					$('.faqs li div.answer').slideUp(250);
+					$(this).siblings('div.answer').slideDown(250);
+					$('.faqs li div.question').removeClass('questionSelected');
+					$(this).addClass('questionSelected');
+				});
+
+				$('.faqs .g-subs .sub').click(function(e){
+					var id = $(e.currentTarget).attr('id');
+					var change = $('.faqs').find('ul.'+id)
+					var $ul = $('.faqs').find('ul');
+					if(!change.is(':visible')){
+						$ul.fadeOut('slow');
+						$ul.addClass('hide');
+						$ul.removeClass('show');
+						change.removeClass('hide');
+						change.fadeIn('slow');
+						change.addClass('show');
+					}
+				})
+			}
+		}
+	})
+
 	.directive('showModalVideo', function(){
 		return {
 			restrict: 'E',
@@ -495,7 +525,7 @@
 			templateUrl: './partials/slider-cart-related.html'
 		};
 	})
-	
+
 	.directive('loadSliderCartRelated', function(){
 		return function(){
 
@@ -718,14 +748,11 @@
 						},
 						success: function(result){
 							$('form#newsletterForm')[0].reset();
-							$('.correctSusc').css({
+							$('.coverAlert span.info span.text').text('Suscripción correcta. ¡Gracias!');
+							$('.coverAlert').css({
+								'z-index' : '10',
 								'opacity' : '1'
 							});
-							setTimeout(function(){
-								$('.correctSusc').css({
-									'opacity' : '0'
-								});
-							}, 2000);
 						},
 						error: function(){
 							alert('Error');
@@ -847,6 +874,11 @@
 				$(document).on('click', '.itemCategory', function(){
 					$('.submenuCategories').slideUp(500);
 					$('.submenuCategories', this).slideDown(500);
+
+					$('html, body').animate({
+						scrollTop: 0
+					}, 500);
+
 				});
 
 				// //$(document).on('click', 'span.category', function(){

@@ -33,6 +33,9 @@
 		.when('/faq', {
 			templateUrl: 'views/faq.html'
 		})
+		.when('/failbox', {
+			templateUrl: 'views/failbox.html'
+		})
 		.when('/aviso-de-privacidad', {
 			templateUrl: 'views/privacidad.html'
 		})

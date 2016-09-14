@@ -397,6 +397,10 @@
     margin-left: 10% !important;
   }
 
+  .carrito .productos .producto .imagen img {
+    width: 70%;
+    max-width: 70%;
+  }
 
 
 }
@@ -406,6 +410,11 @@
   .mi_carrito .productos .producto {
     font-size: 2vw; } }
 @media (max-width: 480px) {
+
+  .carrito .productos .producto .imagen img {
+    width: 100%;
+    max-width: 100%; 
+  }
 
   .datos-envio .resumen .detalle .principal .producto .imagen img{
     margin: 0 auto;

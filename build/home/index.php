@@ -26,7 +26,7 @@
 	</script>
 </head>
 <body ng-controller="connectFacebookController">
-	<div class="contenedor" ng-controller="homeSliderController">
+	<div class="contenedor" ng-controller="homeSliderController" id="contenedor">
 
 		<!-- This elements is to display all the alert by the site -->
 		<div class="coverAlert">
@@ -111,7 +111,5 @@
 			});
 		});
 	</script>
-
-	<!--<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>-->
 </body>
 </html>

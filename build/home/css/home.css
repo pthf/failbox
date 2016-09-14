@@ -1584,7 +1584,7 @@ ul.groupAllItems span{
 ::-webkit-input-placeholder {
 	color: black;
 	font-weight: 200;
-	opacity: 0.6;	
+	opacity: 0.6;
 }
 
 select.form-item-4{
@@ -2235,4 +2235,8 @@ span.returnSpan{
 .coverAlert span.info .imageclose img{
 	width: 100%;
 	height: auto;
+}
+
+.navbar-static-top{
+	z-index: 1 !important;
 }

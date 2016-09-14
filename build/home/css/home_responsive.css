@@ -1076,6 +1076,27 @@
 
 @media(max-width: 768px){
 
+
+	.barNav{
+		font-size: 1.5em !important;
+	}
+
+	.contElements{
+		font-size: 1.2em !important;
+		width: 74.5%;
+		left: 15.5%;
+		max-height: 40vw;
+	}
+
+	.itemSearched {
+		margin-bottom: 1vw;
+	}
+
+	.itemSearched img{
+			width: 15vw !important;
+			height: 15vw !important;
+	}
+
 	.datos-envio .titulo{
 		font-size: 28px !important;
 		text-align: center;
@@ -1111,6 +1132,21 @@
 }
 
 @media (max-width: 485px){
+
+	.contElements{
+		width: 74.5%;
+		left: 8%;
+		max-height: 60vw;
+	}
+
+	.itemSearched {
+		margin-bottom: 2vw;
+	}
+
+	.itemSearched img{
+			width: 25vw !important;
+			height: 25vw !important;
+	}
 
 	.datos-envio .titulo{
 		font-size: 22px !important;
