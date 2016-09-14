@@ -9,61 +9,61 @@
       <div class="formulario col-md-7 col-sm-12 form1" ng-show="idPedido">
         <form class="form" method="post" id="formDatesSend_">
           <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <input id="typeAddress" data-status="acepted" class="form-control" type="text" value="{{datesPedido.TipoDireccion}}" placeholder="Tipo de Dirección (Ejemplo: Oficina, Casa)" name="typeAddress">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="typeAddress" data-status="acepted" class="form-control" type="text" value="{{datesPedido.TipoDireccion}}" placeholder="* Tipo de Dirección (Ejemplo: Oficina, Casa)" name="typeAddress">
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-5 col-sm-5 col-xs-12">
-            <input id="state" data-status="acepted" class="form-control" type="text" placeholder="Selecciona estado o región" value="{{datesPedido.Estado}}" name="state">
-            <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="state" data-status="acepted" class="form-control" type="text" placeholder="* Selecciona estado o región" value="{{datesPedido.Estado}}" name="state">
+            <span  style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-7 col-sm-7 col-xs-12">
-            <input id="city" data-status="acepted" class="form-control" type="text" placeholder="Ciudad, delegación o municipio" value="{{datesPedido.Ciudad}}" name="city">
-            <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="city" data-status="acepted" class="form-control" type="text" placeholder="* Ciudad, delegación o municipio" value="{{datesPedido.Ciudad}}" name="city">
+            <span  style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-4 col-xs-12">
-            <input id="address" data-status="acepted" class="form-control" type="text" placeholder="Calle y Número" value="{{datesPedido.Direccion}}" name="address">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="address" data-status="acepted" class="form-control" type="text" placeholder="* Calle y Número" value="{{datesPedido.Direccion}}" name="address">
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-4 col-xs-12">
-            <input id="street_one" data-status="acepted" class="form-control" type="text" placeholder="Entre la calle" value="{{datesPedido.CalleUno}}" name="street_one">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="street_one" data-status="acepted" class="form-control" type="text" placeholder="* Entre la calle" value="{{datesPedido.CalleUno}}" name="street_one">
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-4 col-xs-12">
-            <input id="street_two" data-status="acepted" class="form-control" type="text" placeholder="Y la calle" value="{{datesPedido.CalleDos}}" name="street_two">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="street_two" data-status="acepted" class="form-control" type="text" placeholder="* Y la calle" value="{{datesPedido.CalleDos}}" name="street_two">
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-4 col-xs-8">
-            <input id="colony" data-status="acepted" class="form-control" type="text" placeholder="Colonia" value="{{datesPedido.Colonia}}" name="colony">
-            <span style="color:red"  class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="colony" data-status="acepted" class="form-control" type="text" placeholder="* Colonia" value="{{datesPedido.Colonia}}" name="colony">
+            <span style="color:red;height: 10px;"  class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-4 col-xs-4">
-            <input id="cp" data-status="acepted" class="form-control" type="text" placeholder="C.P." value="{{datesPedido.CP}}" name="cp">
-            <span  style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="cp" data-status="acepted" class="form-control" type="text" placeholder="* C.P." value="{{datesPedido.CP}}" name="cp">
+            <span  style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div><div class="titulo">
             DATOS DE CONTACTO
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="name" data-status="acepted" class="form-control" type="text" placeholder="Nombre" value="{{datesPedido.Nombre}}" name="name">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="name" data-status="acepted" class="form-control" type="text" placeholder="* Nombre" value="{{datesPedido.Nombre}}" name="name">
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="lastname" data-status="acepted" class="form-control" type="text" placeholder="Apellidos" value="{{datesPedido.Apellido}}" name="lastname">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="lastname" data-status="acepted" class="form-control" type="text" placeholder="* Apellidos" value="{{datesPedido.Apellido}}" name="lastname">
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <input id="email" data-status="acepted" class="form-control" type="text" value="{{datesPedido.Email}}" placeholder="Dirección de correo electrónico" name="email">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="email" data-status="acepted" class="form-control" type="text" value="{{datesPedido.Email}}" placeholder="* Dirección de correo electrónico" name="email">
+            <span style="color:red;height: 10px;;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-6">
             <input id="tel" data-status="acepted" class="form-control" type="text" placeholder="Teléfono" value="{{datesPedido.Telefono}}" name="tel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-6">
-            <input id="cel" data-status="acepted" class="form-control" type="text" placeholder="Celular" value="{{datesPedido.Celular}}" name="cel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <input id="cel" data-status="acepted" class="form-control" type="text" placeholder="* Celular" value="{{datesPedido.Celular}}" name="cel">
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <div style="color:red"class="result_cart"></div>
+            <div style="color:red;height: 10px;"class="result_cart"></div>
           </div>
           <span class="col-md-12 col-sm-12 col-xs-12">Campos obligatorios (*).</span>
           <span class="msgErrorNoSend col-md-12 col-sm-12 col-xs-12" style="color:red"></span>
@@ -77,62 +77,62 @@
         <form class="form" method="post" id="formDatesSend">
           <div class="form-group col-md-12 col-sm-12 col-xs-12">
             <input id="typeAddress" data-status="denied" class="form-control" type="text" value="" placeholder="* Tipo de Dirección (Ejemplo: Oficina, Casa)" name="typeAddress">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-5 col-sm-5 col-xs-12">
 
             <input id="state" data-status="denied" class="form-control" type="text" placeholder="* Selecciona estado o región" value="" name="state">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-7 col-sm-7 col-xs-12">
             <input id="city" data-status="denied" class="form-control" type="text" placeholder="* Ciudad, delegación o municipio" value="" name="city">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-4 col-xs-12">
             <input id="address" data-status="denied" class="form-control" type="text" placeholder="* Calle y Número" value="" name="address">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-4 col-xs-12">
             <input id="street_one" data-status="denied" class="form-control" type="text" placeholder="* Entre la calle" value="" name="street_one">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-4 col-xs-12">
             <input id="street_two" data-status="denied" class="form-control" type="text" placeholder="* Y la calle" value="" name="street_two">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-4 col-xs-8">
             <input id="colony" data-status="denied" class="form-control" type="text" placeholder="* Colonia" value="" name="colony">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-4 col-xs-4">
             <input id="cp" data-status="denied" class="form-control" type="text" placeholder="* C.P." value="" name="cp">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="titulo">
             DATOS DE CONTACTO
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-12">
             <input id="name" data-status="denied" class="form-control" type="text" placeholder="* Nombre" value="" name="name">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-12">
             <input id="lastname" data-status="denied" class="form-control" type="text" placeholder="* Apellidos" value="" name="lastname">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-12 col-xs-12">
             <input id="email" data-status="denied" class="form-control" type="text" value="" placeholder="* Dirección de correo electrónico" name="email">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-6">
             <input id="tel" data-status="acepted" class="form-control" type="text" placeholder="Teléfono" value="" name="tel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-6 col-sm-6 col-xs-6">
             <input id="cel" data-status="denied" class="form-control" type="text" placeholder="* Celular" value="" name="cel">
-            <span style="color:red" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
+            <span style="color:red;height: 10px;" class="msgError col-md-12 col-sm-12 col-xs-12"></span>
           </div>
           <div class="form-group col-md-12 col-sm-12 col-xs-12">
-            <div style="color:red"class="result_cart"></div>
+            <div style="color:red;height: 10px;"class="result_cart"></div>
           </div>
           <span class="col-md-12 col-sm-12 col-xs-12">Campos obligatorios (*).</span>
           <span class="msgErrorNoSend col-md-12 col-sm-12 col-xs-12" style="color:red"></span>

@@ -8,7 +8,7 @@ if (isset($_GET['nameCategory']) && isset($_GET['nameSubcategory']) && isset($_G
                 INNER JOIN Marcas m ON m.IdMarca = p.Marcas_IdMarca
                 INNER JOIN Categorias c ON c.IdCategoria = p.Categorias_IdCategoria
                 INNER JOIN Subcategoria s ON s.IdSubcategoria = p.Subcategoria_IdSubcategoria
-                WHERE c.RouteCategoria = '" . $_GET['nameCategory'] . "' AND s.RouteSubcategoria = '" . $_GET['nameSubcategory'] . "' AND m.RouteMarca = '" . $_GET['nameBrand'] . "' AND Estatus = 'Activo' AND Stock > 0";
+                WHERE c.RouteCategoria = '" . $_GET['nameCategory'] . "' AND s.RouteSubcategoria = '" . $_GET['nameSubcategory'] . "' AND m.RouteMarca = '" . $_GET['nameBrand'] . "' AND Estatus = 'Activo' AND Stock > 0 ORDER BY p.PrecioFailbox DESC";
     $resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
 
     $productos = array();
@@ -72,7 +72,7 @@ if (isset($_GET['nameCategory']) && isset($_GET['nameSubcategory']) && isset($_G
                 INNER JOIN Marcas m ON m.IdMarca = p.Marcas_IdMarca
                 INNER JOIN Categorias c ON c.IdCategoria = p.Categorias_IdCategoria
                 INNER JOIN Subcategoria s ON s.IdSubcategoria = p.Subcategoria_IdSubcategoria
-                WHERE c.RouteCategoria = '" . $_GET['nameCategory'] . "' AND s.RouteSubcategoria = '" . $_GET['nameSubcategory'] . "' AND Estatus = 'Activo' AND Stock > 0";
+                WHERE c.RouteCategoria = '" . $_GET['nameCategory'] . "' AND s.RouteSubcategoria = '" . $_GET['nameSubcategory'] . "' AND Estatus = 'Activo' AND Stock > 0 ORDER BY p.PrecioFailbox DESC";
     $resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
 
     $productos = array();
@@ -135,7 +135,7 @@ if (isset($_GET['nameCategory']) && isset($_GET['nameSubcategory']) && isset($_G
                 INNER JOIN Marcas m ON m.IdMarca = p.Marcas_IdMarca
                 INNER JOIN Categorias c ON c.IdCategoria = p.Categorias_IdCategoria
                 INNER JOIN Subcategoria s ON s.IdSubcategoria = p.Subcategoria_IdSubcategoria
-                WHERE c.RouteCategoria = '" . $_GET['nameCategory'] . "' AND Estatus = 'Activo' AND Stock > 0";
+                WHERE c.RouteCategoria = '" . $_GET['nameCategory'] . "' AND Estatus = 'Activo' AND Stock > 0 ORDER BY p.PrecioFailbox DESC";
     $resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
 
     $productos = array();
@@ -197,7 +197,7 @@ if (isset($_GET['nameCategory']) && isset($_GET['nameSubcategory']) && isset($_G
     $query = "SELECT * FROM Productos p
                 INNER JOIN Marcas m ON m.IdMarca = p.Marcas_IdMarca
                 INNER JOIN Categorias c ON c.IdCategoria = p.Categorias_IdCategoria
-                INNER JOIN Subcategoria s ON s.IdSubcategoria = p.Subcategoria_IdSubcategoria WHERE Estatus = 'Activo' AND Stock > 0";
+                INNER JOIN Subcategoria s ON s.IdSubcategoria = p.Subcategoria_IdSubcategoria WHERE Estatus = 'Activo' AND Stock > 0 ORDER BY p.PrecioFailbox DESC";
     $resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
 
     $productos = array();
