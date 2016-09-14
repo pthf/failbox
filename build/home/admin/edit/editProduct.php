@@ -468,6 +468,21 @@ session_start();
                             </div>
                           </div>
                           <div class=" form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="offer">¿En Oferta?
+                            </label>
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                              <select class="form-control" name="offer">
+                                <?php if ($fila['Oferta'] == 1) { ?>
+                                <option value="0">NO</option>
+                                <option value="1" selected>SI</option>
+                                <?php } else if ($fila['Oferta'] == 0) { ?>
+                                <option value="0" selected>NO</option>
+                                <option value="1">SI</option>
+                                <?php } ?>
+                              </select>
+                            </div>
+                          </div>
+                          <div class=" form-group">
                               <label for="url_paypal" class="control-label col-md-3">URL Paypal </label>
                                 <div class="col-md-6 col-sm-6 col-xs-12">
                                 <input id="url_paypal" type="text" name="url_paypal" class="form-control col-md-7 col-xs-12" required="" placeholder="URL Paypal" value="<?php echo $fila['urlPaypal'];?>">

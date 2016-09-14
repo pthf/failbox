@@ -195,7 +195,7 @@ require_once("../db/conexion.php");
 								'".$formData['cost_shipping']."','".$formData['warranty']."',
 								'".$formData['model']."','".$formData['sku']."',
 								'".$formData['status']."','".$image."',
-								'".$formData['url_paypal']."','".$formData['outstanding']."',
+								'".$formData['url_paypal']."','".$formData['outstanding']."','".$formData['offer']."',
 								'".$datatime."','".$formData['idPrivilegio']."',
 								'".$formData['brand']."','".$formData['category']."',
 								'".$formData['subcategory']."','".$row1['idProveedor']."')";
@@ -324,7 +324,7 @@ require_once("../db/conexion.php");
 	                                PrecioFailbox='" . $formData['pricefailbox'] . "', CostoEnvio='".$formData['cost_shipping']."',
 	                                Modelo='" . $formData['model'] . "',
 	                                SKU='" . $formData['sku'] . "', Estatus='" . $formData['estatus'] . "',
-	                                urlPaypal='" . $formData['url_paypal'] . "',Destacado='" . $formData['outstanding'] . "',
+	                                urlPaypal='" . $formData['url_paypal'] . "',Destacado='" . $formData['outstanding'] . "',Oferta='".$formData['offer']."',
 	                                FechaAlta='".$datatime."', IdPrivilegio='" . $formData['idPrivilegio'] . "', Marcas_IdMarca='".$formData['brand']."', Categorias_IdCategoria='".$formData['category']."',
 	                                Subcategoria_IdSubcategoria='".$formData['subcategory']."'
 								WHERE IdProducto = '" . $formData['id'] . "'";
@@ -558,7 +558,7 @@ require_once("../db/conexion.php");
             $query = "INSERT INTO Productos VALUES(null,'".$array_products[$i][16]."','".$array_products[$i][0]."','".$array_products[$i][1]."','".$nombre_prod."',
                     '".$array_products[$i][2]."','".$array_products[$i][3]."','".$array_products[$i][4]."','".$array_products[$i][5]."',
                     '".$array_products[$i][6]."','".$array_products[$i][7]."','".$array_products[$i][8]."','".(trim($array_products[$i][9]))."',
-                    '".$images."','".$array_products[$i][11]."','".(strtoupper($array_products[$i][12]))."','".$datatime."',
+                    '".$images."','".$array_products[$i][11]."','".(strtoupper($array_products[$i][12]))."','0','".$datatime."',
                     '1','".$row3['IdMarca']."','".$row1['IdCategoria']."','".$row2['IdSubcategoria']."','2')";
 	        $resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
 

@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=nos">
-	<base href="http://localhost/www/failbox/failbox/build/home/">
+	<base href="http://localhost/www/failbox/build/home/">
 	<title>FailBox - Lo que cuenta es lo de adentro.</title>
 	<link rel="shortcut icon" type="image/png" href="./src/images/favicon.png">
 	<link rel="stylesheet" type="text/css" href="./css/home.css">
@@ -25,7 +25,7 @@
 	</script>
 </head>
 <body ng-controller="connectFacebookController">
-	<div class="contenedor" ng-controller="homeSliderController" id="contenedor">
+	<div class="contenedor" ng-controller="homeSliderController">
 
 		<!-- This elements is to display all the alert by the site -->
 		<div class="coverAlert">
@@ -110,5 +110,7 @@
 			});
 		});
 	</script>
+
+	<!--<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>-->
 </body>
 </html>
