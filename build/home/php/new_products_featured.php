@@ -1,7 +1,7 @@
 <?php
 require_once("../admin/db/conexion.php");
 
-$query = "SELECT * FROM Productos p INNER JOIN Marcas m ON m.IdMarca = p.Marcas_IdMarca WHERE Destacado = 'SI' AND Estatus = 'Activo' AND Stock > 0";
+$query = "SELECT * FROM Productos p INNER JOIN Marcas m ON m.IdMarca = p.Marcas_IdMarca WHERE Destacado = 'SI' AND Estatus = 'Activo' AND Stock > 0 ORDER BY p.PrecioFailbox DESC LIMIT 20";
 $resultado = mysql_query($query,Conectar::con()) or die(mysql_error());
 
 $productos = array();
