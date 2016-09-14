@@ -964,8 +964,7 @@
 							$(document).on('change', '#formDatesSend div input[name=typeAddress]', function(e){
 								var value = $(this).val();
 								if(value.length==0){
-									// $(".typeAddress").css({'border' : '1px solid red !important'});
-									$("#typeAddress").css({'border':'2px solid red !important'});
+									$(this).css({'border':'2px solid red'});
 									$(this).siblings('.msgError').text("Agrega un tipo de dirección.");
 									$(this).attr('data-status', 'denied');
 								}else{
@@ -1119,25 +1118,18 @@
 								}
 							});
 
-							// $(document).on('change', '#formDatesSend div input[name=tel]', function(e){
-							// 	var value = $(this).val();
-							// 	if(value.length==0){
-							// 		$(this).css({'border' : '2px solid red'});
-							// 		$(this).siblings('.msgError').text("Agrega un número de teléfono.");
-							// 		$(this).attr('data-status', 'denied');
-							// 	}else{
-							// 		// var expresion = new RegExp("/[^0-9]/");
-							// 		// if(expresion.test(value)){
-							// 			$(this).css({ 'border' : '2px solid #6EB153'});
-							// 			$(this).siblings('.msgError').text("");
-							// 			$(this).attr('data-status', 'acepted');
-							// 		// }else{
-							// 		// 	$(this).css({'border' : '2px solid red'});
-							// 		// 	$(this).siblings('.msgError').text("Introduce un número válido.");
-							// 		// 	$(this).attr('data-status', 'denied');
-							// 		// }
-							// 	}
-							// });
+							$(document).on('change', '#formDatesSend div input[name=tel]', function(e){
+								var value = $(this).val();
+								if(value.length==0){
+									$(this).css({ 'border' : '1px solid #58595b'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}else{
+									$(this).css({ 'border' : '2px solid #6EB153'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}
+							});
 
 							$(document).on('change', '#formDatesSend div input[name=cel]', function(e){
 								var value = $(this).val();
@@ -1210,11 +1202,11 @@
 							$(document).on('change', '#formDatesSend_ div input[name=typeAddress]', function(e){
 								var value = $(this).val();
 								if(value.length==0){
-									$(this).css({'border' : '2px solid red !important'});
+									$(this).css({'border' : '2px solid red'});
 									$(this).siblings('.msgError').text("Agrega un tipo de dirección.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1227,7 +1219,7 @@
 									$(this).siblings('.msgError').text("Agrega un estado.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1240,7 +1232,7 @@
 									$(this).siblings('.msgError').text("Agrega una ciudad.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1253,7 +1245,7 @@
 									$(this).siblings('.msgError').text("Agrega una dirección completa.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1266,7 +1258,7 @@
 									$(this).siblings('.msgError').text("Agrega una calle.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1279,7 +1271,7 @@
 									$(this).siblings('.msgError').text("Agrega una calle.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1292,7 +1284,7 @@
 									$(this).siblings('.msgError').text("Agrega una colonia.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1325,7 +1317,7 @@
 									$(this).siblings('.msgError').text("Agregar nombres.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1338,7 +1330,7 @@
 									$(this).siblings('.msgError').text("Agrega apellidos.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}
@@ -1364,25 +1356,18 @@
 								}
 							});
 
-							// $(document).on('change', '#formDatesSend_ div input[name=tel]', function(e){
-							// 	var value = $(this).val();
-							// 	if(value.length==0){
-							// 		$(this).css({'border' : '2px solid red'});
-							// 		$(this).siblings('.msgError').text("Agrega un número de teléfono.");
-							// 		$(this).attr('data-status', 'denied');
-							// 	}else{
-							// 		// var expresion = new RegExp("/[^0-9]/");
-							// 		// if(expresion.test(value)){
-							// 			$(this).css({ 'border' : '2px solid #6EB153'});
-							// 			$(this).siblings('.msgError').text("");
-							// 			$(this).attr('data-status', 'acepted');
-							// 		// }else{
-							// 		// 	$(this).css({'border' : '2px solid red'});
-							// 		// 	$(this).siblings('.msgError').text("Introduce un número válido.");
-							// 		// 	$(this).attr('data-status', 'denied');
-							// 		// }
-							// 	}
-							// });
+							$(document).on('change', '#formDatesSend div input[name=tel]', function(e){
+								var value = $(this).val();
+								if(value.length==0){
+									$(this).css({ 'border' : '1px solid #58595b'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}else{
+									$(this).css({ 'border' : '2px solid #6EB153'});
+									$(this).siblings('.msgError').text("");
+									$(this).attr('data-status', 'acepted');
+								}
+							});
 
 							$(document).on('change', '#formDatesSend_ div input[name=cel]', function(e){
 								var value = $(this).val();
@@ -1391,7 +1376,7 @@
 									$(this).siblings('.msgError').text("Agrega un número de celular.");
 									$(this).attr('data-status', 'denied');
 								}else{
-									$(this).css({ 'border' : '2px solid #6EB153 !important'});
+									$(this).css({ 'border' : '2px solid #6EB153'});
 									$(this).siblings('.msgError').text("");
 									$(this).attr('data-status', 'acepted');
 								}

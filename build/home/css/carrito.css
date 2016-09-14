@@ -86,10 +86,9 @@
     .carrito .productos .producto .imagen {
       padding: 20px 0; }
       .carrito .productos .producto .imagen img {
-        width: 100%;
+        width: 40%;
         height: auto;
-        display: block;
-        max-width: 50%; }
+        display: block; }
     .carrito .productos .producto .contador .cont {
       padding: 0 10px; }
       .carrito .productos .producto .contador .cont img {
@@ -131,7 +130,7 @@
     -webkit-box-shadow: none;
     box-shadow: none; }
   .datos-envio .formulario input, .datos-envio .formulario select {
-    border: 1px solid #58595b !important;
+    border: 1px solid #58595b;
     border-radius: 0; }
   .datos-envio .formulario .submit {
     width: 100%;
