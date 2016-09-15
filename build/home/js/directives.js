@@ -304,31 +304,13 @@
 			restrict: 'E',
 			templateUrl: './partials/slider-home.html',
 			controller: function($document){
-				var mySwiper;
-				var conf =  {
-					pagination: '.pagination',
-					loop:true,
-					grabCursor: false,
-					paginationClickable: true,
-					autoplay:5500,
-					speed:1000,
-					calculateHeight: true,
-					debugger: false,
-					resizeReInit: true,
-					observer: true,
-					observeParents: true
-				}
 				setTimeout(function(){
-					mySwiper = new Swiper('.swiper-container.swiper-home', conf)
-				}, 80);
-
-				var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
-				if (!isMobile) {
-					//Funcion para recargar cada vez que cambie de tamaño la ventana del navegador
-					$(window).resize(function(){
-						location.reload();
+					var swiper = new Swiper('.swiper-main', {
+						pagination: '.swiper-pagination',
+						loop:true,
+						paginationClickable: true
 					});
-				}
+				},150);
 			}
 		};
 	})

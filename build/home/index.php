@@ -12,6 +12,7 @@
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/carrito.css">
 	<link rel="stylesheet" type="text/css" href="./css/new_characters.css">
+	<link rel="stylesheet" href="./css/slide.css">
 	<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 	<script src="./js/lib/jquery.min.js"></script>
 	<script src="./bootstrap/js/bootstrap.min.js"></script>
@@ -88,6 +89,7 @@
 		// 		fjs.parentNode.insertBefore(js, fjs);
 		// }(document, 'script', 'facebook-jssdk'));
 	</script>
+
 	<!-- Load PopUp first, before to load the home -->
 	<script>
 		function startup(){
@@ -111,6 +113,5 @@
 		});
 	</script>
 
-	<!--<script type="text/javascript" src="http://localhost:35729/livereload.js"></script>-->
 </body>
 </html>

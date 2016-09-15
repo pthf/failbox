@@ -603,7 +603,7 @@ img.icon-featured {
   .marcas-mobile{
     display: block;
     width: 100%;
-    height: auto;
+    height: 80px;
     background: gray;
     overflow-x: scroll;
     white-space: nowrap;
@@ -614,7 +614,8 @@ img.icon-featured {
   }
 
   .marcas-item img {
-      width: 165px;
+    width: 120px;
+    height: 64px;
   }
 
   .categoriesFailbox ul li{
