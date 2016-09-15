@@ -16,25 +16,14 @@
 </ul>
 
 </div-->
-<link rel="stylesheet" href="./css/slide.css">
 
-<section class="slider-wrapper itemBanner">
-
-	<div class="touch-slider">
-
-		<div class="swiper-container swiper-home">
-			<div class="swiper-wrapper">
-				<div class="swiper-slide" ng-repeat="data in bannerMenu" datos='{{data}}'>
-					<a href="{{data.link}}">
-						<img src="./admin/images/bannersHome/{{data.image}}">
-					</a>
-				</div>
-
-			</div>
-		</div>
-
-		<div class="pagination"></div>
-
-	</div>
-
-</section>
+<!-- Swiper -->
+	 <div class="swiper-container swiper-main">
+			 <div class="swiper-wrapper wrapper-main">
+					 <div class="swiper-slide slide-main" ng-repeat="(key, data) in bannerMenu">
+					 		<a href="{{data.link}}" target="_blank"><img src="./admin/images/bannersHome/{{data.image}}" alt="" /></a>
+					 </div>
+			 </div>
+			 <!-- Add Pagination -->
+			 <div class="swiper-pagination"></div>
+	 </div>

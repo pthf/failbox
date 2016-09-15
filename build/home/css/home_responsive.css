@@ -411,6 +411,14 @@
 
 @media (max-width: 1023px){
 
+	.socialFailBox {
+	  width: 50%;
+	}
+
+	.socialFailBox.container{
+		width: 90%
+	}
+
 	div.item .imgBox img.imgInfo {
     top: 16%;
     left: 44%;
@@ -1015,8 +1023,14 @@
 
 @media(min-width: 807px){
 	.bottomSite .navFailBox{
-		padding-left: 25px !important;
+		padding-left: 15px !important;
+		width: 40%;
 	}
+
+	.socialFailBox {
+	    width: 50%;
+	}
+
 
 }
 

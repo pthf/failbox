@@ -1,3 +1,16 @@
+/* main slider */
+.swiper-slide.slide-main img,.swiper-container,.swiper-wrapper {
+  height: 30vw !important;
+}
+
+.swiper-pagination {
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+}
+
 section.slider-wrapper {
 	position: relative;
 	height: 100%;
@@ -18,25 +31,10 @@ section.slider-wrapper {
 	transition: all 0.7s ease;
 }
 
-.arrow-right {
-	right: 4%;
-}
-
-.arrow-left {
-	left: 2%;
-}
-
-.arrow-right:hover,
-.arrow-left:hover {
-	color: #23275f;
-	cursor: pointer;
-}
-
 .swiper-container {
 	height: 100%;
 	width: 100%;
 }
-
 
 .swiper-slide img {
 	width: 100%;
@@ -70,7 +68,6 @@ section.slider-wrapper {
 
 .swiper-container {
 	width: 100%;
-
 	margin: 0 auto;
 	position: relative;
 	overflow: hidden;
@@ -193,6 +190,7 @@ section.slider-wrapper {
 
 
 @media (max-width: 768px) {
+
 	.swiper-pagination-switch {
 		width: 12px;
 		height: 12px;
